@@ -4,9 +4,16 @@ import { Carousel } from "react-responsive-carousel";
 
 const useStyles = makeStyles((theme) => ({
   image: {
-    height:200,
-    [theme.breakpoints.up('sm')]: {
-       height:560,
+    //height: '30vh',
+    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      height: '30vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '30vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '90vh',
     },
   },
 }));

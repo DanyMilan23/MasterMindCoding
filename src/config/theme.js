@@ -18,10 +18,11 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: "'Open Sans', sans-serif",
+    //fontFamily: "'Open Sans', sans-serif",
     button: {
-      fontSize: '21px',
-      lineHeight: '29px',
+      fontFamily:"'Roboto-Condensed',Helvetica,Arial,sans-Serif",
+      fontSize: '18px',
+      lineHeight: '27px',
       color: '#171c48',
       fontWeight: 400,
     },
