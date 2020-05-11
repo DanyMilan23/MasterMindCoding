@@ -12,10 +12,8 @@ const Layout = props => {
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"/>
                 <link href="/static/css/app.css" rel="stylesheet" />
             </Head>
-
             <Header/>
             <main>
-
                 {props.children}
             </main>
             <Footer/>

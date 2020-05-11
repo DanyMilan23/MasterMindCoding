@@ -63,8 +63,6 @@ export default function MenuAppBar() {
             style={{
               height: "10%",
               width: "20%",
-              paddingTop: 10,
-              paddingBottom: 10,
             }}
           />
           {source ? (
