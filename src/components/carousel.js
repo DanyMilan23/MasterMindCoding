@@ -26,16 +26,16 @@ export default () => {
     <>
       <Carousel dynamicHeight={false} showThumbs={false} infiniteLoop={true} showStatus={false} interval={20000} dynamicHeight={true} autoPlay>
         <div>
-          <img alt="" src="web_text.jpg" className={classes.image}/>  
+          <img alt="" src="web.jpg" className={classes.image}/>  
         </div>
         <div>
-          <img alt="" src="/mobile_text.jpg" className={classes.image}/>
+          <img alt="" src="mobile.jpg" className={classes.image}/>
         </div>
         <div>
-          <img alt="" src="qa_text.jpg" className={classes.image}/> 
+          <img alt="" src="qa.jpg" className={classes.image}/> 
         </div>
         <div>
-          <img alt="" src="support_text.jpg" className={classes.image}/>
+          <img alt="" src="support.jpg" className={classes.image}/>
         </div>
       </Carousel>
     </>

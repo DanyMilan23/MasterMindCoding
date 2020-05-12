@@ -20,6 +20,7 @@ import Router from "next/router";
 //Menu
 import Menu from "../menuList";
 import MenuButton from "../menuButtons";
+import Test from '../alternativeMenu'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
   image: {
     //height: '30vh',
     
-    paddingTop:2,
-    paddingBottom:2,
+    paddingTop:10 ,
+    paddingBottom:10,
     [theme.breakpoints.down('sm')]: {
       height: '5vh',
     },
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
       height: '5vh',
     },
     [theme.breakpoints.up('lg')]: {
-      height: '13vh',
+      height: '10vh',
     },
 
   },

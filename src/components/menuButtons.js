@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft:'10px'
   },
   container:{
-    paddingRight:'35px'
+    paddingRight:'8vw'
   }
 }));
 
