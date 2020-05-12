@@ -26,6 +26,25 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+  image: {
+    //height: '30vh',
+    
+    paddingTop:2,
+    paddingBottom:2,
+    [theme.breakpoints.down('sm')]: {
+      height: '5vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '10vh',
+    },
+    [theme.breakpoints.down('lg')]: {
+      height: '5vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '13vh',
+    },
+
+  },
 }));
 
 export default function MenuAppBar() {
@@ -36,7 +55,7 @@ export default function MenuAppBar() {
     right: false,
   });
   //MediaQuery
-  const matches = useMediaQuery("(min-width:960px)");
+  const matches = useMediaQuery("(min-width:1280px)");
   useEffect(() => {
     setSource(matches);
   }, [matches]);
@@ -59,11 +78,8 @@ export default function MenuAppBar() {
       <AppBar position="static" color="background">
         <Toolbar className={classes.root}>
           <img
-            src="/logo-brand.svg"
-            style={{
-              height: "10%",
-              width: "20%",
-            }}
+            src="logo-brand.png"
+            className={classes.image}
           />
           {source ? (
             <MenuButton />

@@ -20,10 +20,10 @@ const theme = createMuiTheme({
   typography: {
     //fontFamily: "'Open Sans', sans-serif",
     button: {
-      fontFamily:"'Roboto-Condensed',Helvetica,Arial,sans-Serif",
-      fontSize: '18px',
-      lineHeight: '27px',
+      fontSize: '21px',
+      lineHeight: '29px',
       color: '#171c48',
+      fontFamily: "'Roboto', sans-serif",
       fontWeight: 400,
     },
   },

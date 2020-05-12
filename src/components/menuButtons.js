@@ -6,25 +6,24 @@ import Constants from '../config/constants'
 
 const useStyles = makeStyles((theme) => ({
   boton: {
-    fontSize: '21px',
-    lineHeight: '29px',
-    color: '#171c48',
-    fontFamily: 'Open Sans,sans-serif',
-    fontWeight: 400,
+    marginLeft:'10px'
   },
+  container:{
+    paddingRight:'35px'
+  }
 }));
 
 
 export default function MenuAppBar() {
     const classes = useStyles();
     return( 
-      <div>
-        <Button color="primary">{Constants.STRINGS.SOLUTIONS}</Button>
-        <Button color="primary">{Constants.STRINGS.INDUSTRY}</Button>
-        <Button color="primary">{Constants.STRINGS.TECHNOLOGY}</Button>
-        <Button color="primary">{Constants.STRINGS.CAREERS}</Button>
-        <Button color="primary">{Constants.STRINGS.ABOUT}</Button>
-        <Button color="primary">{Constants.STRINGS.CONTACT}</Button>
+      <div className={classes.container}>
+        <Button color="primary" className={classes.boton}>{Constants.STRINGS.SOLUTIONS}</Button>
+        <Button color="primary" className={classes.boton}>{Constants.STRINGS.INDUSTRY}</Button>
+        <Button color="primary" className={classes.boton}>{Constants.STRINGS.TECHNOLOGY}</Button>
+        <Button color="primary" className={classes.boton}>{Constants.STRINGS.CAREERS}</Button>
+        <Button color="primary" className={classes.boton}>{Constants.STRINGS.ABOUT}</Button>
+        <Button color="primary" className={classes.boton}>{Constants.STRINGS.CONTACT}</Button>
       </div>
     );
 }

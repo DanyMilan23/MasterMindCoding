@@ -7,14 +7,15 @@ const useStyles = makeStyles((theme) => ({
     //height: '30vh',
     width: '100%',
     [theme.breakpoints.down('sm')]: {
-      height: '30vh',
+      height: '35vh',
     },
-    [theme.breakpoints.up('md')]: {
-      height: '30vh',
+     [theme.breakpoints.up('sm')]: {
+      height: '40vh',
     },
     [theme.breakpoints.up('lg')]: {
-      height: '90vh',
+      height: '87vh',
     },
+
   },
 }));
 
