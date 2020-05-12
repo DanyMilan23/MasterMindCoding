@@ -76,16 +76,17 @@ export default function MenuAppBar() {
   );
   return (
     <div>
+      {source ? (
       <AppBar position="static" color="background">
         <Toolbar className={classes.root}>
           <img
             src="logo-brand.png"
             className={classes.image}
           />
-          {source ? (
+          
             <MenuButton />
-          ) : (
-            <>
+          
+           {/* <>
               <IconButton
                 edge="start"
                 color="inherit"
@@ -94,10 +95,10 @@ export default function MenuAppBar() {
               >
                 <MoreIcon />
               </IconButton>
-            </>
-          )}
+            </>*/}
+         
         </Toolbar>
-      </AppBar>
+      </AppBar>):(<Test/>)}
       <Drawer anchor='right' open={menu.right} onClose={toggleDrawer("right", false)}>
         {MenuList()}
       </Drawer>

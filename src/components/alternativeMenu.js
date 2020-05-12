@@ -3,11 +3,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Button from "@material-ui/core/Button";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import MenuIcon from '@material-ui/icons/Menu';
 import Constants from '../config/constants'
 
 const useStyles = makeStyles(theme => ({
+  icon:{
+      width:30,
+      height:30,
+  },
   root: {
     width: "100vw",
   },
@@ -39,7 +45,7 @@ export default function DetailedExpansionPanel() {
     <div className={classes.root}>
       <ExpansionPanel className={classes.root}>
         <ExpansionPanelSummary
-          expandIcon={<MoreIcon />}
+          expandIcon={<MenuIcon className={classes.icon} />}
           aria-controls="panel1c-content"
           id="panel1c-header"
         >
@@ -48,14 +54,26 @@ export default function DetailedExpansionPanel() {
             className={classes.image}
           />
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
+        <ExpansionPanelActions>
             <Button color="primary" fullWidth>{Constants.STRINGS.SOLUTIONS}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions>
             <Button color="primary" fullWidth>{Constants.STRINGS.INDUSTRY}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions>
             <Button color="primary" fullWidth>{Constants.STRINGS.TECHNOLOGY}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions>
             <Button color="primary" fullWidth>{Constants.STRINGS.CAREERS}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions>
             <Button color="primary" fullWidth>{Constants.STRINGS.ABOUT}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions>
             <Button color="primary" fullWidth>{Constants.STRINGS.CONTACT}</Button>
-        </ExpansionPanelDetails>
+        </ExpansionPanelActions>
+        
+        
       </ExpansionPanel>
     </div>
   );

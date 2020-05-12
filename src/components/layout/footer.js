@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     minHeight: '10vh',
   },
+  imagen:{
+    marginLeft:200,
+  },
   main: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(2),
@@ -40,11 +43,14 @@ export default function StickyFooter() {
 
   return (
     <div className={classes.root}>
-      <footer className={classes.footer}>
+      {/*<footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1">Quality and innovation for our users</Typography>
           <Copyright />
         </Container>
+      </footer>*/}
+      <footer>
+        <img src='wip2.jpg' className={classes.imagen}/>
       </footer>
     </div>
   );
