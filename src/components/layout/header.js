@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     
     paddingTop:10 ,
     paddingBottom:10,
-    [theme.breakpoints.down('sm')]: {
+    /*[theme.breakpoints.down('sm')]: {
       height: '5vh',
     },
     [theme.breakpoints.up('sm')]: {
@@ -43,8 +43,26 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       height: '10vh',
+    },*/
+    //movil vertical
+    [theme.breakpoints.down('xs')]: {
+      height: '3vh',
     },
-
+    [theme.breakpoints.up('xs')]: {
+      height: '10vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '8vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '13vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '10vh',
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: '10vh',
+    },
   },
 }));
 

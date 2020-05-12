@@ -22,9 +22,12 @@ const useStyles = makeStyles(theme => ({
     marginTop:'20px',
     flexDirection: 'column',
     minHeight: '10vh',
+    //alignItems: 'center',
   },
   imagen:{
-    marginLeft:200,
+    alignItems:'center',
+    width:'100vw',
+    height:'70vh',
   },
   main: {
     marginTop: theme.spacing(8),

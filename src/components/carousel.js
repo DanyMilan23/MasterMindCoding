@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     //height: '30vh',
     width: '100%',
-    [theme.breakpoints.down('sm')]: {
+    /*[theme.breakpoints.down('sm')]: {
       height: '35vh',
     },
      [theme.breakpoints.up('sm')]: {
@@ -14,8 +14,25 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       height: '87vh',
+    },*/
+    [theme.breakpoints.down('xs')]: {
+      height: '30vh',
     },
-
+    [theme.breakpoints.up('xs')]: {
+      height: '90vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '40vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '87vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '90vh',
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: '90vh',
+    },
   },
 }));
 

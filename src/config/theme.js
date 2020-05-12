@@ -1,8 +1,17 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
-
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
 // Create a theme instance.
 const theme = createMuiTheme({
+  breakpoints:{
+    values:{
+      xs:375,
+      sm:812,
+      md:1024,
+      lg:1200,
+      xl:1500,
+    }
+  },
   palette: {
     primary: {
       main: '#171c48',
