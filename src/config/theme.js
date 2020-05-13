@@ -5,11 +5,11 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
 const theme = createMuiTheme({
   breakpoints:{
     values:{
-      xs:375,
-      sm:812,
-      md:1024,
-      lg:1200,
-      xl:1500,
+      xs:0,
+      sm:415,
+      md:825,
+      lg:1024,
+      xl:1680,
     }
   },
   palette: {

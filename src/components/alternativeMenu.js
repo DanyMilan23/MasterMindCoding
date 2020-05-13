@@ -11,30 +11,46 @@ import Constants from '../config/constants'
 
 const useStyles = makeStyles(theme => ({
   icon:{
-      width:30,
-      height:30,
-  },
-  root: {
-    width: "100vw",
-  },
-   image: {
-    //height: '30vh',
-    
-    paddingTop:10 ,
-    paddingBottom:10,
     [theme.breakpoints.down('sm')]: {
-      height: '5vh',
+      height: '2vh',
     },
     [theme.breakpoints.up('sm')]: {
-      height: '10vh',
+      height: '5vh',
     },
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.up('md')]: {
       height: '5vh',
     },
     [theme.breakpoints.up('lg')]: {
+      height: '5vh',
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: '10vh',
+    },
+  },
+   image: {
+    marginTop:1,
+    [theme.breakpoints.down('sm')]: {
+      height: '3vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '6vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '5vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '5vh',
+    },
+    [theme.breakpoints.up('xl')]: {
       height: '10vh',
     },
 
+  },
+  boton:{
+    paddingTop:0,
+    paddingBottom:0,
+    height:'15px',
+    fontSize:'10px',
   },
 }));
 
@@ -42,8 +58,8 @@ export default function DetailedExpansionPanel() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <ExpansionPanel className={classes.root}>
+    <div>
+      <ExpansionPanel >
         <ExpansionPanelSummary
           expandIcon={<MenuIcon className={classes.icon} />}
           aria-controls="panel1c-content"
@@ -54,26 +70,24 @@ export default function DetailedExpansionPanel() {
             className={classes.image}
           />
         </ExpansionPanelSummary>
-        <ExpansionPanelActions>
-            <Button color="primary" fullWidth>{Constants.STRINGS.SOLUTIONS}</Button>
+        <ExpansionPanelActions >
+            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.SOLUTIONS}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions >
+            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.INDUSTRY}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions >
+            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.TECHNOLOGY}</Button>
+        </ExpansionPanelActions>
+        <ExpansionPanelActions >
+            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.CAREERS}</Button>
         </ExpansionPanelActions>
         <ExpansionPanelActions>
-            <Button color="primary" fullWidth>{Constants.STRINGS.INDUSTRY}</Button>
+            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.ABOUT}</Button>
         </ExpansionPanelActions>
-        <ExpansionPanelActions>
-            <Button color="primary" fullWidth>{Constants.STRINGS.TECHNOLOGY}</Button>
-        </ExpansionPanelActions>
-        <ExpansionPanelActions>
-            <Button color="primary" fullWidth>{Constants.STRINGS.CAREERS}</Button>
-        </ExpansionPanelActions>
-        <ExpansionPanelActions>
-            <Button color="primary" fullWidth>{Constants.STRINGS.ABOUT}</Button>
-        </ExpansionPanelActions>
-        <ExpansionPanelActions>
-            <Button color="primary" fullWidth>{Constants.STRINGS.CONTACT}</Button>
-        </ExpansionPanelActions>
-        
-        
+        <ExpansionPanelActions >
+            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.CONTACT}</Button>
+        </ExpansionPanelActions>   
       </ExpansionPanel>
     </div>
   );

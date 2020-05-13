@@ -28,34 +28,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   image: {
-    //height: '30vh',
-    
     paddingTop:10 ,
     paddingBottom:10,
-    /*[theme.breakpoints.down('sm')]: {
-      height: '5vh',
-    },
-    [theme.breakpoints.up('sm')]: {
-      height: '10vh',
-    },
-    [theme.breakpoints.down('lg')]: {
-      height: '5vh',
-    },
-    [theme.breakpoints.up('lg')]: {
-      height: '10vh',
-    },*/
-    //movil vertical
-    [theme.breakpoints.down('xs')]: {
-      height: '3vh',
-    },
-    [theme.breakpoints.up('xs')]: {
-      height: '10vh',
-    },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       height: '8vh',
     },
+    [theme.breakpoints.up('sm')]: {
+      height: '10vh',
+    },
     [theme.breakpoints.up('md')]: {
-      height: '13vh',
+      height: '8vh',
     },
     [theme.breakpoints.up('lg')]: {
       height: '10vh',
@@ -63,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('xl')]: {
       height: '10vh',
     },
+   
   },
 }));
 
@@ -101,20 +84,7 @@ export default function MenuAppBar() {
             src="logo-brand.png"
             className={classes.image}
           />
-          
-            <MenuButton />
-          
-           {/* <>
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                onClick={toggleDrawer("right", true)}
-              >
-                <MoreIcon />
-              </IconButton>
-            </>*/}
-         
+          <MenuButton />
         </Toolbar>
       </AppBar>):(<Test/>)}
       <Drawer anchor='right' open={menu.right} onClose={toggleDrawer("right", false)}>
