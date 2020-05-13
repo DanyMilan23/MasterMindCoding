@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import Popover from "@material-ui/core/Popover";
 import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
+import Box from "@material-ui/core/Box";
 //import Burbuja from './burbuja'
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -112,6 +113,15 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Robot', sans-serif",
     fontWeight: 400,
     letterSpacing: "-1px",
+    [theme.breakpoints.down("sm")]: {
+      width: "90vw",
+      fontSize: "12px",
+      height: "auto",
+      paddingLeft: 5,
+      paddingTop: 5,
+      paddingRight: 5,
+      paddingBottom: 5,
+    },
   },
   popover: {
     borderRadius: "10px ! important",
@@ -134,51 +144,15 @@ const Whyus = () => {
           justify="flex-start"
           alignItems="flex-start"
         >
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
-          <Grid item xs={1}>
-            <Paper className={classes.paper}> 11 </Paper>
-          </Grid>
           {/*Aqui van las 1eras letras */}
           <Grid xs={12} md={6} lg={4}>
             <Typography className={classes.title}> Why us?</Typography>
           </Grid>
-          <Grid xs={0} md={6} lg={8} />
+          <Grid  xs={0} md={6} lg={8} />
           {/*Espacio para el card */}
-          <Grid xs={0} md={6} lg={6} />
+          <Grid  xs={0} md={6} lg={6} />
           {/**imagen */}
-          <Grid xs={2} md={1} lg={1}>
+          <Grid item xs={2} md={1} lg={1}>
             <PopupState variant="popover" popupId="demo-popup-popover">
               {(popupState) => (
                 <div>
@@ -200,12 +174,12 @@ const Whyus = () => {
                       borderRadius: 20,
                     }}
                   >
-                    <Typography className={classes.burbuja}>
-                      Our geographical proximity is a Huge plus for your Agile
-                      Software Development, we ensure successful software
-                      development project based on efficient communication
-                      between teams and customers.
-                    </Typography>
+                      <Typography className={classes.burbuja}>
+                        Our geographical proximity is a Huge plus for your Agile
+                        Software Development, we ensure successful software
+                        development project based on efficient communication
+                        between teams and customers.
+                      </Typography>
                   </Popover>
                 </div>
               )}
