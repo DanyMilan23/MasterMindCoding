@@ -18,11 +18,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "30px",
     },
   },
+  container:{
+    marginBottom:50
+  }
 }));
 const Whyus = () => {
   const classes = useStyles();
   return (
-    <>
+    <div className={classes.container}>
       <Container maxWidth>
         <Grid
           container
@@ -39,7 +42,7 @@ const Whyus = () => {
         </Grid>
       </Container>
       <Valores/>
-    </>
+    </div>
   );
 };
 

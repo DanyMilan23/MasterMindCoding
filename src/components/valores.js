@@ -12,24 +12,24 @@ const valores = (props) => {
     val5: false,
   });
   const im1={
-      height:'85px',
-      width:'78px',
+      height:'78px',
+      width:'85px',
   }
   const im2={
-      height:'65px',
+      height:'66px',
       width:'85px',
   }
   const im3={
-      height:'72px',
-      width:'87px',
+      height:'87px',
+      width:'72px',
   }
   const im4={
-      height:'85px',
-      width:'77px',
+      height:'77px',
+      width:'85px',
   }
   const im5={
-      height:'77px',
-      width:'87px',
+      height:'87px',
+      width:'77px',
   }
   
 
