@@ -11,6 +11,27 @@ const valores = (props) => {
     val4: false,
     val5: false,
   });
+  const im1={
+      height:'85px',
+      width:'78px',
+  }
+  const im2={
+      height:'65px',
+      width:'85px',
+  }
+  const im3={
+      height:'72px',
+      width:'87px',
+  }
+  const im4={
+      height:'85px',
+      width:'77px',
+  }
+  const im5={
+      height:'77px',
+      width:'87px',
+  }
+  
 
   return (
     <div>
@@ -21,6 +42,7 @@ const valores = (props) => {
         resumen={Constants.STRINGS.VALOR1RES}
         tipo={true}
         estado={valor.val1}
+        estilos={im1}
         funcion={(e) => {
           e.preventDefault();
           setValor({
@@ -39,6 +61,7 @@ const valores = (props) => {
         resumen={Constants.STRINGS.VALOR2RES}
         tipo={false}
         estado={valor.val2}
+        estilos={im2}
         funcion={(e) => {
           e.preventDefault();
           setValor({
@@ -57,6 +80,7 @@ const valores = (props) => {
         resumen={Constants.STRINGS.VALOR3RES}
         tipo={true}
         estado={valor.val3}
+        estilos={im3}
         funcion={(e) => {
           e.preventDefault();
           setValor({
@@ -75,6 +99,7 @@ const valores = (props) => {
         resumen={Constants.STRINGS.VALOR4RES}
         tipo={false}
         estado={valor.val4}
+        estilos={im4}
         funcion={(e) => {
           e.preventDefault();
           setValor({
@@ -93,6 +118,7 @@ const valores = (props) => {
         resumen={Constants.STRINGS.VALOR5RES}
         tipo={true}
         estado={valor.val5}
+        estilos={im5}
         funcion={(e) => {
           e.preventDefault();
           setValor({

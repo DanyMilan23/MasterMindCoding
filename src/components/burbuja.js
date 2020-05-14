@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       height: "auto",
       paddingLeft: 5,
       paddingTop: 5,
-      paddingRight: 5,
+      paddingRight: 15,
       paddingBottom: 5,
     },
   },

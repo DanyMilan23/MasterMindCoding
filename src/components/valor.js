@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "-1px",
   },
   subtitle3: {
-    paddingTop: 30,
+    paddingTop: 20,
     //paddingLeft: 20,
     //fontSize: "32px",
     [theme.breakpoints.down("lg")]: {
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "32px",
-      paddingLeft: 15,
+      paddingLeft: 10,
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
@@ -57,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: 20,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "32px",
-      paddingLeft: 15,
+      fontSize: "34px",
+      paddingLeft: 10,
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "16px",
-      paddingLeft: 15,
+      paddingLeft: 10,
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "12px",
@@ -92,13 +92,13 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     letterSpacing: "-1px",
   },
-  img: {
+  /*img: {
     //height:'18vh',
     //width:'18vh',
     paddingLeft: "20px",
     height: "72px",
     width: "68px",
-  },
+  },*/
   burbuja: {
     paddingLeft: 20,
     paddingTop: 20,
@@ -132,6 +132,7 @@ const valor = ({
   tipo,
   estado,
   funcion,
+  estilos
 }) => {
   const classes = useStyles();
   const [source, setSource] = useState(false);
@@ -153,16 +154,16 @@ const valor = ({
           {/** Burbuja en posicion de escritorio */}
           {source ? <Grid item xs={false} md={1} lg={1} /> : null}
           {source ? (
-            <Grid item xs={false} md={5} lg={5}>
+            <Grid item xs={false} md={4} lg={4}>
               {estado?<Burbuja descripcion={descripcion} />:null}
             </Grid>
           ) : null}
-
+            {source ? <Grid item xs={false} md={1} lg={1} /> : null}
           {/*source ? <Grid item xs={false} md={1} lg={1} /> : null*/}
           {/** imagen*/}
           <Grid item xs={2} md={2} lg={1}>
             <IconButton onClick={funcion}>
-              <img src={imagen} className={classes.img} />
+              <img src={imagen} style={estilos} />
             </IconButton>
           </Grid>
           {/** Descripcion */}
