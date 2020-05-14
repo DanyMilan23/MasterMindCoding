@@ -12,16 +12,16 @@ import Constants from '../config/constants'
 const useStyles = makeStyles(theme => ({
   icon:{
     [theme.breakpoints.down('sm')]: {
-      height: '2vh',
+      height: '6vh'
     },
     [theme.breakpoints.up('sm')]: {
-      height: '5vh',
+      height: '8vh',
     },
     [theme.breakpoints.up('md')]: {
-      height: '5vh',
+      height: '6vh',
     },
     [theme.breakpoints.up('lg')]: {
-      height: '5vh',
+      height: '6vh',
     },
     [theme.breakpoints.up('xl')]: {
       height: '10vh',
@@ -30,13 +30,13 @@ const useStyles = makeStyles(theme => ({
    image: {
     marginTop:1,
     [theme.breakpoints.down('sm')]: {
-      height: '3vh',
+      height: '5vh'
     },
     [theme.breakpoints.up('sm')]: {
-      height: '6vh',
+      height: '10vh',
     },
     [theme.breakpoints.up('md')]: {
-      height: '5vh',
+      height: '10vh',
     },
     [theme.breakpoints.up('lg')]: {
       height: '5vh',
@@ -45,6 +45,9 @@ const useStyles = makeStyles(theme => ({
       height: '10vh',
     },
 
+  },
+  linksContainer: {
+    'justify-content': 'left'
   },
   boton:{
     paddingTop:0,
@@ -70,23 +73,23 @@ export default function DetailedExpansionPanel() {
             className={classes.image}
           />
         </ExpansionPanelSummary>
-        <ExpansionPanelActions >
-            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.SOLUTIONS}</Button>
+        <ExpansionPanelActions className={classes.linksContainer}>
+            <Button color="primary" className={classes.boton}>{Constants.STRINGS.SOLUTIONS}</Button>
         </ExpansionPanelActions>
-        <ExpansionPanelActions >
-            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.INDUSTRY}</Button>
+        <ExpansionPanelActions className={classes.linksContainer}>
+            <Button color="primary" className={classes.boton}>{Constants.STRINGS.INDUSTRY}</Button>
         </ExpansionPanelActions>
-        <ExpansionPanelActions >
-            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.TECHNOLOGY}</Button>
+        <ExpansionPanelActions className={classes.linksContainer}>
+            <Button color="primary" className={classes.boton}>{Constants.STRINGS.TECHNOLOGY}</Button>
         </ExpansionPanelActions>
-        <ExpansionPanelActions >
-            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.CAREERS}</Button>
+        <ExpansionPanelActions className={classes.linksContainer}>
+            <Button color="primary" className={classes.boton}>{Constants.STRINGS.CAREERS}</Button>
         </ExpansionPanelActions>
-        <ExpansionPanelActions>
-            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.ABOUT}</Button>
+        <ExpansionPanelActions className={classes.linksContainer}>
+            <Button color="primary" className={classes.boton}>{Constants.STRINGS.ABOUT}</Button>
         </ExpansionPanelActions>
-        <ExpansionPanelActions >
-            <Button color="primary" className={classes.boton} fullWidth>{Constants.STRINGS.CONTACT}</Button>
+        <ExpansionPanelActions className={classes.linksContainer}>
+            <Button color="primary" className={classes.boton}>{Constants.STRINGS.CONTACT}</Button>
         </ExpansionPanelActions>   
       </ExpansionPanel>
     </div>
