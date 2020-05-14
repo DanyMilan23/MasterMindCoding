@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Whyus from '../whyus'
+//import Valores from '../valores'
+import Constants from '../../config/constants'
 
 function Copyright() {
   return (
@@ -54,6 +56,7 @@ export default function StickyFooter() {
         </Container>
       </footer>*/}
       <footer>
+        {/*<Whyus/>*/}
         <Whyus/>
         <img src='wip2.jpg' className={classes.imagen}/>
         
