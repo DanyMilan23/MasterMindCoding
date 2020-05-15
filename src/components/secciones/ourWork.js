@@ -19,11 +19,16 @@ const useStyles = makeStyles((theme) => ({
   img:{
     height:'auto',
     width:'45vw',
-    paddingBottom:70
+    paddingBottom:70,
+    [theme.breakpoints.down("sm")]: {
+      //fontSize: "10px",
+      width: '90vw',
+      paddingBottom:10,
+    },
   },
   subtitle:{
     paddingTop:80,
-    width: '465px',
+    width: '40vw',
     //height: '377px',
     fontSize: '18px',
     lineHeight: '20px',
@@ -31,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily:  "'Robot', sans-serif",
     fontWeight: 500,
     letterSpacing: "-1px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "9px",
+      width: '80vw',
+      paddingTop:10,
+    },
   },
   description:{
 

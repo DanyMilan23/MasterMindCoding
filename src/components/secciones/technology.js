@@ -10,10 +10,10 @@ import Item from "./technology/tech";
 import Button from '@material-ui/core/Button';
 
 const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 7},
-  { width: 1200, itemsToShow: 4 }
+  { width: 1, itemsToShow: 2 },
+  { width: 415, itemsToShow: 4 },
+  { width: 825, itemsToShow: 7},
+  { width: 1025, itemsToShow: 4 }
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -21,6 +21,14 @@ const useStyles = makeStyles(theme => ({
         width: '100vw',
         height: '60vh',
         backgroundColor: '#171c48',
+        [theme.breakpoints.down("sm")]: {
+            width: '100vw',
+            height: '35vh',
+        },
+        [theme.breakpoints.up("sm")]: {
+            width: '100vw',
+            height: '70vh',
+        },
     },
     title:{
         paddingTop:'70px',
@@ -31,9 +39,9 @@ const useStyles = makeStyles(theme => ({
         fontFamily: "'Robot', sans-serif",
         fontWeight: 700,
         [theme.breakpoints.down("sm")]: {
-        fontSize: "30px",
-        paddingTop:'35px',
-        paddingBottom:'35px',
+            fontSize: "30px",
+            paddingTop:'35px',
+            paddingBottom:'10px',
         },
     }
 }))

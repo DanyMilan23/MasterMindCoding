@@ -8,6 +8,8 @@ import Techonology from '../secciones/technology';
 //import Valores from '../valores'
 import Constants from '../../config/constants'
 import Ourwork from '../secciones/ourWork'
+import Misionvision from '../secciones/misionvision'
+import Contact from '../secciones/contact'
 
 function Copyright() {
   return (
@@ -62,6 +64,8 @@ export default function StickyFooter() {
         <Whyus/>
         <Techonology/>
         <Ourwork/>
+        <Misionvision/>
+        <Contact/>
         <img src='wip2.jpg' className={classes.imagen}/>
         
       </footer>
