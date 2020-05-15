@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 
 const breakPoints = [
   { width: 1, itemsToShow: 2 },
-  { width: 415, itemsToShow: 4 },
+  { width: 415, itemsToShow: 6 },
   { width: 825, itemsToShow: 7},
   { width: 1025, itemsToShow: 7 }
 ];
@@ -109,7 +109,7 @@ const technology = props => {
                     </Grid>
                     {/**Carousel */}
                     <Grid item xs={0} md={0} lg={1}/>
-                    <Grid item xs={12} md={10} lg={10}>
+                    <Grid item xs={12} md={12} lg={10}>
                         <Carousel breakPoints={breakPoints} renderArrow={myArrow} pagination={false}>
                             <Item imagen={'angular.png'} estilos={classes.i1}/>
                             <Item imagen={'react.png'} estilos={classes.i2}/>
