@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   container:{
+    paddingTop:40,
+    paddingLeft:56,
+    paddingRight:56,
     marginBottom:50
   }
 }));

@@ -18,6 +18,8 @@ const breakPoints = [
 
 const useStyles = makeStyles(theme => ({
     carousel:{
+        paddingLeft:56,
+        paddingRight:56,
         width: '100vw',
         height: 'auto',
         backgroundColor: '#171c48',

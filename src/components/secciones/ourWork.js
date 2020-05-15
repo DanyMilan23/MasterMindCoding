@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     height:'auto',
     
     [theme.breakpoints.down("sm")]: {
-        width:'40vw',
+        width:'35vw',
         paddingBottom:15,
     },
     [theme.breakpoints.up("sm")]: {
@@ -102,8 +102,10 @@ const useStyles = makeStyles((theme) => ({
       paddingTop:30,
     },
   },
-  description:{
-
+  container:{
+      paddingTop:40,
+      paddingLeft:56,
+      paddingRight:56,
   },
  
  
@@ -119,7 +121,7 @@ const ourWork = () => {
     }, [matches]);
     return (
         <>
-        <Container maxWidth>
+        <Container className={classes.container} maxWidth>
         {/**titulo */}
             <Grid
             container

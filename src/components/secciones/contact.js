@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
     title: {
-    
+    textAlign:'center',
     lineheight: "20px",
     color: "#171c48",
     fontFamily: "'Robot', sans-serif",
@@ -28,16 +28,28 @@ const useStyles = makeStyles(theme => ({
       paddingTop:30
     },
   },
-  imagen:{
-   
-    width:'45vw',
+  imagen:{   
     height:'auto',
+    [theme.breakpoints.down("sm")]: {
+        width:'80vw',
+    },
+    [theme.breakpoints.up("sm")]: {
+        width:'90vw',
+    },
+    [theme.breakpoints.up("md")]: {
+        width:'35vw',
+    },
+    [theme.breakpoints.up("lg")]: {
+        width:'45vw',
+    },
   },
   container:{
-      paddingTop:40
+      paddingTop:40,
+      paddingLeft:56,
+      paddingRight:56,
   },
   info:{
-    paddingTop:40,    
+    paddingTop:75,    
     width:'auto',
     height:'auto',
     fontSize: '18px',
@@ -46,7 +58,26 @@ const useStyles = makeStyles(theme => ({
     color: '#17457f',
     fontFamily:"'Robot', sans-serif",
     fontWeight: 400,
-  }
+    [theme.breakpoints.down("sm")]: {
+         paddingTop:20,
+    },
+  },
+   text:{
+    paddingTop:30, 
+     paddingBottom:20,   
+    width:'auto',
+    height:'auto',
+    fontSize: '18px',
+    letterSpacing: '0px',
+    lineHeight: '24px',
+    color: '#17457f',
+    fontFamily:"'Robot', sans-serif",
+    fontWeight: 400,
+  },
+  input:{
+      paddingBottom:20,
+  },
+  
 }));
 
 function contact(props) {
@@ -74,22 +105,19 @@ function contact(props) {
                                 <Typography className={classes.title}>CONTACT</Typography>
                             </Grid>
                             <Grid item xs={12} md={6} lg={6} >
-                                <Typography className={classes.info}>7901 4TH ST N STE 4238, 
-
-                                    ST. PETERSBURG, FL 33702
-
-                                    info@mastermindcoding.net
-
-                                    Tel: (US) +1-786 633 1731
-
+                                <Typography className={classes.info}>
+                                    7901 4TH ST N STE 4238, <br/>
+                                    ST. PETERSBURG, FL 33702<br/>
+                                    info@mastermindcoding.net<br/>
+                                    Tel: (US) +1-786 633 1731<br/>
                                     Tel: (BO) +591 - 70710554
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} md={6} lg={6}>
-                                <TextField required  color="primary" id="name" label="Name" fullWidth/>
-                                <TextField required  color="primary" id="Email" label="Email" fullWidth/>
-                                <TextField required  color="primary" id="Subject" label="Subject" fullWidth/>
-                                <Typography className={classes.info}>Type your message here...</Typography>
+                                <TextField required  className={classes.input} color="primary" id="name" label="Name" fullWidth/>
+                                <TextField required  className={classes.input} color="primary" id="Email" label="Email" fullWidth/>
+                                <TextField required  className={classes.input} color="primary" id="Subject" label="Subject" fullWidth/>
+                                <Typography className={classes.text}>Type your message here...</Typography>
                                 <Button variant="contained" color="primary">
                                     Submit
                                 </Button>

@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     description:{
         paddingLeft:'8vw',
         paddingTop:35,
-        paddingBottom:35,
+        paddingBottom:50,
         width: '33vw',
         fontSize: '22px',
         lineHeight: '30px',
@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             fontSize: '11px',
             paddingTop:10,
-            width: '80vw',
-            paddingLeft:'7vw',
+            width: '70vw',
+            paddingLeft:'5vw',
             paddingBottom:15,
         },
         //paddingLeft:140,
@@ -44,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
     container:{
         width:'100vw',
         height:'auto',
+        paddingLeft:56,
+        paddingRight:56,
         backgroundColor:'#171c48',
         alignItems:'center',
         [theme.breakpoints.down("sm")]: {

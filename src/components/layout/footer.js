@@ -10,6 +10,7 @@ import Constants from '../../config/constants'
 import Ourwork from '../secciones/ourWork'
 import Misionvision from '../secciones/misionvision'
 import Contact from '../secciones/contact'
+import Minifooter from '../secciones/miniFooter'
 
 function Copyright() {
   return (
@@ -66,6 +67,7 @@ export default function StickyFooter() {
         <Ourwork/>
         <Misionvision/>
         <Contact/>
+        <Minifooter/>
         <img src='wip2.jpg' className={classes.imagen}/>
         
       </footer>
