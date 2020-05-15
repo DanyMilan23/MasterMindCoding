@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:40,
     paddingLeft:56,
     paddingRight:56,
-    marginBottom:50
+    marginBottom:90
   }
 }));
 const Whyus = () => {

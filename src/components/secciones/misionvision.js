@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     description:{
         paddingLeft:'8vw',
         paddingTop:35,
-        paddingBottom:50,
+        paddingBottom:80,
         width: '33vw',
         fontSize: '22px',
         lineHeight: '30px',

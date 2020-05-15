@@ -8,7 +8,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
     container:{
-        paddingTop:20,
+        paddingTop:30,
         paddingBottom:20
     },
    

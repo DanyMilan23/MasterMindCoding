@@ -106,6 +106,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop:40,
       paddingLeft:56,
       paddingRight:56,
+      paddingBottom:50,
   },
  
  
