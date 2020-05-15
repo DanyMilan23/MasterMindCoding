@@ -7,7 +7,7 @@ import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Button from "@material-ui/core/Button";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import MenuIcon from '@material-ui/icons/Menu';
-import Constants from '../config/constants'
+import Constants from '../../../config/constants'
 
 const useStyles = makeStyles(theme => ({
   icon:{

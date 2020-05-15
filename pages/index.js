@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Layout from '../src/components/layout/layout';
-import Carousel from '../src/components/carousel'
-import Burbuja from '../src/components/burbuja'
+import Carousel from '../src/components/secciones/banner/carousel'
 
 export default function Home() {
   return (

@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 
 //components of carousel
 import Carousel,{ consts }  from "react-elastic-carousel";
-import Item from "./tech";
+import Item from "./technology/tech";
 import Button from '@material-ui/core/Button';
 
 const breakPoints = [

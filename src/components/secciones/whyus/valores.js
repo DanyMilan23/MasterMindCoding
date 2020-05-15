@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 //componentes
 import Valor from "./valor";
-import Constants from "../config/constants";
+import Constants from "../../../config/constants";
 
 const valores = (props) => {
   const [valor, setValor] = useState({

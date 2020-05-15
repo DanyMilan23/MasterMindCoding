@@ -19,8 +19,8 @@ import Link from "next/link";
 import Router from "next/router";
 //Menu
 import Menu from "../menuList";
-import MenuButton from "../menuButtons";
-import Test from '../alternativeMenu'
+import MenuButton from "../secciones/banner/menuButtons";
+import Test from '../secciones/banner/alternativeMenu'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,28 +53,11 @@ export default function MenuAppBar() {
   const classes = useStyles();
   //states
   const [source, setSource] = useState(false);
-  const [menu, setmenu] = React.useState({
-    right: false,
-  });
   //MediaQuery
   const matches = useMediaQuery("(min-width:1280px)");
   useEffect(() => {
     setSource(matches);
   }, [matches]);
-  //funcion de activacion del slide
-  const toggleDrawer = (side, open) => (event) => {
-    setmenu({ ...menu, [side]: open });
-  };
-  const MenuList = (tipo) => (
-    <div
-      className={classes.list}
-      role="presentation"
-      onClick={toggleDrawer("right", false)}
-      onKeyDown={toggleDrawer("right", false)}
-    >
-      <Menu />
-    </div>
-  );
   return (
     <div>
       {source ? (
@@ -86,10 +69,7 @@ export default function MenuAppBar() {
           />
           <MenuButton />
         </Toolbar>
-      </AppBar>):(<Test/>)}
-      <Drawer anchor='right' open={menu.right} onClose={toggleDrawer("right", false)}>
-        {MenuList()}
-      </Drawer>
+      </AppBar>):(<Test/>)}   
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 //Component
-import Valores from './valores'
+import Valores from './whyus/valores'
 
 const useStyles = makeStyles((theme) => ({
    title: {
@@ -35,7 +35,7 @@ const Whyus = () => {
           alignItems="flex-start"
         >
           {/*Aqui van las 1eras letras */}
-          <Grid xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Typography className={classes.title}> WHY US?</Typography>
           </Grid>
           <Grid  xs={0} md={6} lg={8} />

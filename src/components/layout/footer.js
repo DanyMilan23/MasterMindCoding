@@ -3,10 +3,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import Whyus from '../whyus'
-import Techonology from '../technology';
+import Whyus from '../secciones/whyus'
+import Techonology from '../secciones/technology';
 //import Valores from '../valores'
 import Constants from '../../config/constants'
+import Ourwork from '../secciones/ourWork'
 
 function Copyright() {
   return (
@@ -60,6 +61,7 @@ export default function StickyFooter() {
         {/*<Whyus/>*/}
         <Whyus/>
         <Techonology/>
+        <Ourwork/>
         <img src='wip2.jpg' className={classes.imagen}/>
         
       </footer>
