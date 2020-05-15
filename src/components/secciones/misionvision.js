@@ -5,12 +5,13 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
+    //Google Sans", Roboto, arial, sans-serif
     title:{
         paddingTop:50,
         fontSize: '40px',
         lineHeight: '48px',
         color:'#ffffff',
-        fontFamily: "'Robot', sans-serif",
+        fontFamily: "'Google Sans', Roboto, arial, sans-serif",
         fontWeight: 400,
         textAlign:'center',
         letterSpacing: "-1px",
@@ -22,29 +23,31 @@ const useStyles = makeStyles((theme) => ({
     description:{
         paddingLeft:'8vw',
         paddingTop:35,
+        paddingBottom:35,
         width: '33vw',
         fontSize: '22px',
         lineHeight: '30px',
         color: '#ffffff',
-        fontFamily: "'Robot', sans-serif",
+        //fontFamily: "'Robot', sans-serif",
+         fontFamily: "'Google Sans', Roboto, arial, sans-serif",
         fontWeight: 400,
         letterSpacing: "-1px",
         [theme.breakpoints.down("sm")]: {
             fontSize: '11px',
-            paddingTop:0,
+            paddingTop:10,
             width: '80vw',
             paddingLeft:'7vw',
+            paddingBottom:15,
         },
         //paddingLeft:140,
     },
     container:{
         width:'100vw',
-        height:'70vh',
+        height:'auto',
         backgroundColor:'#171c48',
         alignItems:'center',
         [theme.breakpoints.down("sm")]: {
-            width: '100vw',
-            height: '60vh',
+            width: '100vw',          
         },
     },
     sub:{
@@ -66,7 +69,7 @@ const misiovision = () => {
             alignItems="flex-start"
             >
                 <Grid item xs={12} md={6} lg={6} className={classes.sub}>
-                    <Typography className={classes.title}>MISSION</Typography>
+                    <Typography className={classes.title}><b>MISSION</b></Typography>
                     <Typography className={classes.description}>OUR MISSION IS TO BE THE BEST PARTNER
                     FOR OUR CLIENTS, COMPLEMENTING
                     THEIR TEAMS, ASSEMBLING SKILLED
@@ -75,7 +78,7 @@ const misiovision = () => {
                     </Typography>
                 </Grid>
                 <Grid item xs={12} md={6} lg={6} className={classes.sub}>
-                    <Typography className={classes.title}>VISSION</Typography>
+                    <Typography className={classes.title}><b>VISSION</b></Typography>
                     <Typography className={classes.description}>OUR VISION IS TO BECOME THE LEADER
                         COMPANY IN NEARSHORE SOFTWARE
                         DEVELOPMENT, WHERE WE TREAT OUR

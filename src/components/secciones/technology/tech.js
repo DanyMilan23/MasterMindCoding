@@ -18,12 +18,12 @@ const useStyles = makeStyles(theme => ({
    }
 }))
 
-const tech = ({imagen}) => {
+const tech = ({imagen,estilos}) => {
     const classes = useStyles();
     return (
         <div>
             <Box  borderRadius="50%" {...defaultProps} >
-                    <img src={imagen} className={classes.cont}/>             
+                    <img src={imagen} className={estilos}/>             
             </Box>
         </div>
     );
