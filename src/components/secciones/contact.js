@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Maps from '../maps'
+import Email from '../email'
 
 const useStyles = makeStyles(theme => ({
     title: {
@@ -83,6 +84,18 @@ const useStyles = makeStyles(theme => ({
 
 function contact(props) {
     const classes = useStyles();
+    const [email,setEmail]=useState({
+        name:'',
+        email:'',
+        body:'',
+    })
+    const handlePress = () => {
+      fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: email.name, email: email.email })
+      });
+    }
     return (
         <div>
             <Container className={classes.container} maxWidth>
@@ -93,13 +106,13 @@ function contact(props) {
                 justify="flex-start"
                 alignItems="flex-start">
                     <Grid item xs={12} md={5} lg={6}>
-                        {/*<img src={'maps.png'}  className={classes.imagen}/>*/}
-                        <Maps
+                        
+                       {/* <Maps
                             googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAqAU3g5vFCHVIaa8bvuBNPlYhZOJfv6rA'}
                             containerElement={<div style={{height:'400px'}}/> }   
                             mapElement={<div style={{height:'100%'}}/>}
                             loadingElement={<p>Cargando</p>}
-                        />
+                        />*/}
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                         <Grid 
@@ -121,11 +134,44 @@ function contact(props) {
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} md={6} lg={6}>
-                                <TextField required  className={classes.input} color="primary" id="name" label="Name" fullWidth/>
-                                <TextField required  className={classes.input} color="primary" id="Email" label="Email" fullWidth/>
-                                <TextField required  className={classes.input} color="primary" id="Subject" label="Subject" fullWidth/>
+                                <TextField required  
+                                className={classes.input} 
+                                color="primary" 
+                                id="name" 
+                                label="Name"
+                                onChange={(e) => {
+                                    setEmail({
+                                    ...email,
+                                    name: e.target.value,
+                                    });
+                                }}
+                                fullWidth/>
+                                <TextField required  
+                                className={classes.input} 
+                                color="primary" 
+                                id="Email" 
+                                label="Email" 
+                                onChange={(e) => {
+                                    setEmail({
+                                    ...email,
+                                    email: e.target.value,
+                                    });
+                                }}
+                                fullWidth/>
+                                <TextField required  
+                                className={classes.input} 
+                                color="primary" 
+                                id="Subject" 
+                                label="Subject" 
+                                onChange={(e) => {
+                                    setEmail({
+                                    ...email,
+                                    body: e.target.value,
+                                    });
+                                }}
+                                fullWidth/>
                                 <Typography className={classes.text}>Type your message here...</Typography>
-                                <Button variant="contained" color="primary">
+                                <Button variant="contained" color="primary" onClick={handlePress}>
                                     Submit
                                 </Button>
                             </Grid>
