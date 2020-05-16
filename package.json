@@ -11,11 +11,13 @@
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@material-ui/icons": "^4.9.1",
+    "load-google-maps-api": "^2.0.2",
     "material-ui-popup-state": "^1.5.4",
     "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-elastic-carousel": "^0.4.1",
+    "react-google-maps": "^9.4.5",
     "react-responsive-carousel": "^3.2.7",
     "styled-components": "^5.1.0"
   }

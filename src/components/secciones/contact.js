@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Maps from '../maps'
 
 const useStyles = makeStyles(theme => ({
     title: {
@@ -92,7 +93,13 @@ function contact(props) {
                 justify="flex-start"
                 alignItems="flex-start">
                     <Grid item xs={12} md={5} lg={6}>
-                        <img src={'maps.png'}  className={classes.imagen}/>
+                        {/*<img src={'maps.png'}  className={classes.imagen}/>*/}
+                        <Maps
+                            googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAqAU3g5vFCHVIaa8bvuBNPlYhZOJfv6rA'}
+                            containerElement={<div style={{height:'400px'}}/> }   
+                            mapElement={<div style={{height:'100%'}}/>}
+                            loadingElement={<p>Cargando</p>}
+                        />
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                         <Grid 
