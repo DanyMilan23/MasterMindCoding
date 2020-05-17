@@ -17,22 +17,22 @@ const useStyles = makeStyles((theme) => ({
         
         [theme.breakpoints.down("sm")]: {
             width:125,
-            height:27,
+            height:23,
             paddingRight:'35vw',
         },
         [theme.breakpoints.up("sm")]: {
              width:125,
-            height:27,
+            height:23,
             paddingRight:'63vw',
         },
         [theme.breakpoints.up("md")]: {
             width:250,
-            height:55,
+            height:45,
             paddingRight:'63vw',
         },
         [theme.breakpoints.up("lg")]: {
             width:250,
-            height:55,
+            height:45,
             paddingRight:'70vw',
         },
     },
@@ -48,9 +48,9 @@ function miniFooter(props) {
                     <img className={classes.img} src='logo-brand.png'/>
                 
         
-                        <FacebookIcon  color='primary'/>
-                        <LinkedInIcon color='primary'/>
-                        <TwitterIcon  color='primary'/>
+                        <FacebookIcon  style={{ color:'#3b5998' }}/>
+                        <LinkedInIcon style={{ color:'#0e76a8' }}/> 
+                        <TwitterIcon  style={{ color:'#00acee' }}/>
                          
               
                 

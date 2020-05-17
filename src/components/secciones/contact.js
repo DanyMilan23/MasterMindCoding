@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Maps from '../maps'
+import Mapita from '../map'
 import Email from '../email'
 
 const useStyles = makeStyles(theme => ({
@@ -26,7 +27,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: "30px",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "60px",
+      fontSize: "30px",
       paddingTop:30
     },
   },
@@ -49,8 +50,12 @@ const useStyles = makeStyles(theme => ({
       paddingTop:120,
       paddingLeft:56,
       paddingRight:56,
+      [theme.breakpoints.down("sm")]: {
+         paddingTop:30,
+    },
   },
   info:{
+    paddingLeft:20,
     paddingTop:75,    
     width:'auto',
     height:'auto',
@@ -65,16 +70,8 @@ const useStyles = makeStyles(theme => ({
     },
   },
    text:{
-    paddingTop:30, 
-     paddingBottom:20,   
-    width:'auto',
-    height:'auto',
-    fontSize: '18px',
-    letterSpacing: '0px',
-    lineHeight: '24px',
-    color: '#17457f',
-    fontFamily:"'Robot', sans-serif",
-    fontWeight: 400,
+   
+    paddingBottom:20,   
   },
   input:{
       paddingBottom:20,
@@ -82,6 +79,15 @@ const useStyles = makeStyles(theme => ({
   
 }));
 
+const places = [
+  {
+    name: "Master Mind Coding LLC",
+    title: "Master Mind Coding LLC",
+    lat: 27.844573, 
+    lng: -82.638146,
+    id: 1,
+  },
+];
 function contact(props) {
     const classes = useStyles();
     const [email,setEmail]=useState({
@@ -106,13 +112,15 @@ function contact(props) {
                 justify="flex-start"
                 alignItems="flex-start">
                     <Grid item xs={12} md={5} lg={6}>
-                        
-                       {/*<Maps
+                        <Mapita
                             googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAqAU3g5vFCHVIaa8bvuBNPlYhZOJfv6rA'}
-                            containerElement={<div style={{height:'500px'}}/> }   
-                            mapElement={<div style={{height:'100%'}}/>}
-                            loadingElement={<p>Cargando</p>}
-                        />*/}
+                            loadingElement={<div style={{ height: `100%` }} />}
+                            containerElement={<div style={{ height: `500px` }} />}
+                            mapElement={<div style={{ height: `100%` }} />}
+                            center={{ lat: 27.844573, lng: -82.638146 }}
+                            zoom={15}
+                            places={places}
+                        />
                     </Grid>
                     <Grid item xs={12} md={6} lg={6}>
                         <Grid 
@@ -133,7 +141,7 @@ function contact(props) {
                                     Tel: (BO) +591 - 70710554
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} md={6} lg={6}>
+                            <Grid item xs={12} md={5} lg={5}>
                                 <TextField required  
                                 className={classes.input} 
                                 color="primary" 
@@ -170,12 +178,25 @@ function contact(props) {
                                     });
                                 }}
                                 fullWidth/>
-                                <Typography className={classes.text}>Type your message here...</Typography>
-                                <Button variant="contained" color="primary" onClick={handlePress}>
+                                <TextField
+                                id="text"
+                                label="Type your message here..."
+                                multiline
+                                rows={3}
+                                variant="outlined"
+                                color="primary" 
+                                className={classes.text}
+                                fullWidth/>
+                               
+                               
+                            </Grid>
+                            <Grid item  xs={1} md={1} lg={1}/>
+                            <Grid item  xs={9} md={10} lg={10}/>
+                            <Grid item  xs={3} md={2} lg={2}>
+                                 <Button size="small" variant="contained" color="primary" onClick={handlePress} >
                                     Submit
                                 </Button>
                             </Grid>
-                            
                         </Grid>
                     </Grid>
                 </Grid>

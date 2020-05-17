@@ -12,6 +12,7 @@ import Misionvision from '../secciones/misionvision'
 import Contact from '../secciones/contact'
 import Minifooter from '../secciones/miniFooter'
 import Ayuda from '../grid'
+import Test from '../secciones/test'
 
 function Copyright() {
   return (
@@ -55,21 +56,14 @@ export default function StickyFooter() {
 
   return (
     <div className={classes.root}>
-      {/*<footer className={classes.footer}>
-        <Container maxWidth="sm">
-          <Typography variant="body1">Quality and innovation for our users</Typography>
-          <Copyright />
-        </Container>
-      </footer>*/}
       <footer>
-        {/*<Whyus/>*/}
-        <Ayuda/>
         <Whyus/>
         <Techonology/>
-        <Ourwork/>
+        <Test/>
         <Misionvision/>
         <Contact/>
         <Minifooter/>
+        
         <img src='wip2.jpg' className={classes.imagen}/>
         
       </footer>

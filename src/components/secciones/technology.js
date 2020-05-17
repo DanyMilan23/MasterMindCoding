@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
         width: '100vw',
         height: 'auto',
         backgroundColor: '#171c48',
-        paddingBottom:'100px',
+        paddingBottom:'80px',
         [theme.breakpoints.down("sm")]: {
             width: '100vw',
             height: 'auto',
@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     title:{
-        paddingTop:'70px',
+        paddingTop:'80px',
         paddingBottom:'50px',
         fontSize: '60px',
         lineHeight: '20px',
@@ -89,7 +89,7 @@ const useStyles = makeStyles(theme => ({
 const technology = props => {
      const classes = useStyles();
      const myArrow = ({ type, onClick })=>{
-      const pointer = type === consts.PREV ? (<img src='arrow-left.png' style={{height:'70px', width:'70px'}}/>) : (<img src='arrow-right.png' style={{height:'70px', width:'70px'}}/>)
+      const pointer = type === consts.PREV ? (<img src='arrow-left.png' style={{height:'40px', width:'50px'}}/>) : (<img src='arrow-right.png' style={{height:'40px', width:'50px'}}/>)
       return <Button onClick={onClick}>{pointer}</Button>
     }
     

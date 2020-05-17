@@ -8,10 +8,10 @@ const useStyles = makeStyles((theme) => ({
     //Google Sans", Roboto, arial, sans-serif
     title:{
         paddingTop:50,
-        fontSize: '40px',
+        fontSize: '60px',
         lineHeight: '48px',
         color:'#ffffff',
-        fontFamily: "'Google Sans', Roboto, arial, sans-serif",
+        fontFamily: "'Open Sans',sans-serif",
         fontWeight: 400,
         textAlign:'center',
         letterSpacing: "-1px",
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '30px',
         color: '#ffffff',
         //fontFamily: "'Robot', sans-serif",
-         fontFamily: "'Google Sans', Roboto, arial, sans-serif",
+         fontFamily: "'Open Sans',sans-serif",
         fontWeight: 400,
         letterSpacing: "-1px",
         [theme.breakpoints.down("sm")]: {
