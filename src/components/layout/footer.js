@@ -11,6 +11,7 @@ import Ourwork from '../secciones/ourWork'
 import Misionvision from '../secciones/misionvision'
 import Contact from '../secciones/contact'
 import Minifooter from '../secciones/miniFooter'
+import Ayuda from '../grid'
 
 function Copyright() {
   return (
@@ -62,6 +63,7 @@ export default function StickyFooter() {
       </footer>*/}
       <footer>
         {/*<Whyus/>*/}
+        <Ayuda/>
         <Whyus/>
         <Techonology/>
         <Ourwork/>

@@ -5,7 +5,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
+import Link from "@material-ui/core/Link";
 //componentes
 import Burbuja from "./burbuja";
 
@@ -27,43 +27,28 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     letterSpacing: "-1px",
   },
-  subtitle3: {
-    paddingTop: 20,
-    //paddingLeft: 20,
-    //fontSize: "32px",
-    [theme.breakpoints.down("lg")]: {
-      fontSize: "24px",
-      paddingLeft: 20,
-    },
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "32px",
-      paddingLeft: 10,
-    },
+  subtitle1: {
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
-      paddingLeft: 45,
+      paddingLeft: 55,
+      paddingTop: 5,
     },
-    lineHeight: "34px",
-    color: "#171c48",
-    fontFamily: "'Robot', sans-serif",
-    fontWeight: 700,
-    letterSpacing: "-1px",
-  },
-  subtitle: {
-    paddingTop: 8,
-    //paddingLeft: 10,
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.up("sm")]: {
       fontSize: "24px",
       paddingLeft: 20,
+      paddingTop: 5,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 10,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "34px",
-      paddingLeft: 10,
+      fontSize: "28px",
+      paddingLeft: 20,
+      paddingTop: 10,
     },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "16px",
-      paddingLeft: 45,
-    },
+   
     lineHeight: "34px",
     color: "#171c48",
     fontFamily: "'Robot', sans-serif",
@@ -71,18 +56,137 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "-1px",
   },
   subtitle2: {
-    //paddingLeft: 10,
-    [theme.breakpoints.down("lg")]: {
-      fontSize: "14px",
+     [theme.breakpoints.down("sm")]: {
+       fontSize: "16px",
+      paddingLeft: 55,
+      paddingTop: 5,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 20,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "24px",
+      paddingTop: 20,
       paddingLeft: 20,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "16px",
-      paddingLeft: 10,
+      fontSize: "28px",
+      paddingLeft: 20,
+      paddingTop: 20,
     },
+    lineHeight: "34px",
+    color: "#171c48",
+    fontFamily: "'Robot', sans-serif",
+    fontWeight: 700,
+    letterSpacing: "-1px",
+  },
+  subtitle3: {
+   [theme.breakpoints.down("sm")]: {
+       fontSize: "16px",
+      paddingLeft: 55,
+      paddingTop: 25,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 40,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 20,
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "32px",
+      paddingLeft: 20,
+      paddingTop: 25,
+      
+    },
+    lineHeight: "28px",
+    color: "#171c48",
+    fontFamily: "'Robot', sans-serif",
+    fontWeight: 700,
+    letterSpacing: "-1px",
+  },
+  subtitle4: {
     [theme.breakpoints.down("sm")]: {
+       fontSize: "16px",
+      paddingLeft: 55,
+      paddingTop: 35,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 28,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 20,
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "28px",
+      paddingLeft: 20,
+      paddingTop: 30,
+    },
+    lineHeight: "34px",
+    color: "#171c48",
+    fontFamily: "'Robot', sans-serif",
+    fontWeight: 700,
+    letterSpacing: "-1px",
+  },
+  subtitle5: {
+   [theme.breakpoints.down("sm")]: {
+       fontSize: "16px",
+      paddingLeft: 55,
+      paddingTop: 25,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 20,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "24px",
+      paddingLeft: 20,
+      paddingTop: 20,
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "28px",
+      paddingLeft: 20,
+      paddingTop:20,
+     
+    },
+    lineHeight: "34px",
+    color: "#171c48",
+    fontFamily: "'Robot', sans-serif",
+    fontWeight: 700,
+    letterSpacing: "-1px",
+  },
+
+  subtitle: {
+   
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: 1,
       fontSize: "12px",
-      paddingLeft: 45,
+      paddingLeft: 55,
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: 5,
+      fontSize: "16px",
+      paddingLeft: 20,
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: 5,
+      fontSize: "16px",
+      paddingLeft: 20,
+    },
+     [theme.breakpoints.up("lg")]: {
+      fontSize: "16px",
+      paddingLeft: 20,
+      paddingTop: 5,
     },
 
     // fontSize: "16px",
@@ -122,6 +226,9 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: 5,
     },
   },
+  container: {
+    marginBottom: 30,
+  },
 }));
 
 const valor = ({
@@ -132,7 +239,7 @@ const valor = ({
   tipo,
   estado,
   funcion,
-  estilos
+  estilos,
 }) => {
   const classes = useStyles();
   const [source, setSource] = useState(false);
@@ -143,7 +250,7 @@ const valor = ({
   }, [matches]);
   return (
     <div>
-      <Container maxWidth>
+      <Container className={classes.container} maxWidth>
         <Grid
           container
           spacing={1}
@@ -155,10 +262,10 @@ const valor = ({
           {source ? <Grid item xs={false} md={1} lg={1} /> : null}
           {source ? (
             <Grid item xs={false} md={4} lg={4}>
-              {estado?<Burbuja descripcion={descripcion} />:null}
+              {estado ? <Burbuja descripcion={descripcion} /> : null}
             </Grid>
           ) : null}
-            {source ? <Grid item xs={false} md={1} lg={1} /> : null}
+          {source ? <Grid item xs={false} md={1} lg={1} /> : null}
           {/*source ? <Grid item xs={false} md={1} lg={1} /> : null*/}
           {/** imagen*/}
           <Grid item xs={2} md={2} lg={1}>
@@ -168,18 +275,48 @@ const valor = ({
           </Grid>
           {/** Descripcion */}
           <Grid item xs={10} md={10} lg={4}>
-            {tipo == true ? (
-              <Typography className={classes.subtitle}>{titulo}</Typography>
-            ) : (
-              <Typography className={classes.subtitle3}>{titulo}</Typography>
-            )}
-            <Typography className={classes.subtitle2}>{resumen}</Typography>
+            {tipo == 1 ? (
+              <Typography className={classes.subtitle1}>
+                <Link href="#" onClick={funcion}>
+                  {titulo}
+                </Link>
+              </Typography>
+            ) : null}
+            {tipo == 2 ? (
+              <Typography className={classes.subtitle2}>
+                <Link href="#" onClick={funcion}>
+                  {titulo}
+                </Link>
+              </Typography>
+            ) : null}
+            {tipo == 3 ? (
+              <Typography className={classes.subtitle3}>
+                <Link href="#" onClick={funcion}>
+                  {titulo}
+                </Link>
+              </Typography>
+            ) : null}
+            {tipo == 4 ? (
+              <Typography className={classes.subtitle4}>
+                <Link href="#" onClick={funcion}>
+                  {titulo}
+                </Link>
+              </Typography>
+            ) : null}
+            {tipo == 5 ? (
+              <Typography className={classes.subtitle5}>
+                <Link href="#" onClick={funcion}>
+                  {titulo}
+                </Link>
+              </Typography>
+            ) : null}
+            <Typography className={classes.subtitle}>{resumen}</Typography>
           </Grid>
           <Grid item xs={false} md={false} lg={1} />
           {/** Burbuja en posicion de movil */}
           {source ? null : (
             <Grid item xs={12} md={0} lg={0}>
-               {estado?<Burbuja descripcion={descripcion} />:null}
+              {estado ? <Burbuja descripcion={descripcion} /> : null}
             </Grid>
           )}
         </Grid>

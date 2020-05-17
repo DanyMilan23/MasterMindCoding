@@ -22,7 +22,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:40,
     paddingLeft:56,
     paddingRight:56,
-    marginBottom:90
+    marginBottom:90,
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft:10,
+      paddingRight:10,
+    },
   }
 }));
 const Whyus = () => {

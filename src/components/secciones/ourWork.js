@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     
     lineheight: "20px",
     color: "#171c48",
-    fontFamily: "'Robot', sans-serif",
+    fontFamily: "'Roboto', sans-serif",
     fontWeight: 700,
     letterSpacing: "-1px",
     [theme.breakpoints.down("sm")]: {

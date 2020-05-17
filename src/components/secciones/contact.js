@@ -107,9 +107,9 @@ function contact(props) {
                 alignItems="flex-start">
                     <Grid item xs={12} md={5} lg={6}>
                         
-                       {/* <Maps
+                       {/*<Maps
                             googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAqAU3g5vFCHVIaa8bvuBNPlYhZOJfv6rA'}
-                            containerElement={<div style={{height:'400px'}}/> }   
+                            containerElement={<div style={{height:'500px'}}/> }   
                             mapElement={<div style={{height:'100%'}}/>}
                             loadingElement={<p>Cargando</p>}
                         />*/}

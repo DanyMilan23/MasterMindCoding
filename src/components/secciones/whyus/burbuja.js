@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     lineHeight: "20px",
     color: "#17457f",
-    fontFamily: "'Robot', sans-serif",
+    fontFamily: "'Roboto', sans-serif",
     fontWeight: 400,
     letterSpacing: "-1px",
     borderRadius: "30px ! important",
@@ -55,9 +55,11 @@ const burbuja = ({descripcion}) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-        <Box borderRadius={'15px 40px 40px 15px'} {...defaultProps} className={classes.container} boxShadow={10} >
+        <Box borderRadius={'15px 40px 40px 15px'} {...defaultProps} className={classes.container} boxShadow={20} >
             <Typography className={classes.burbuja}>
+            <b>
             {descripcion}
+            </b>
             </Typography>
         </Box>
     
