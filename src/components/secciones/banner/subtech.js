@@ -97,15 +97,70 @@ export default function MenuListComposition() {
                     onKeyDown={handleListKeyDown}
                     color='primary'
                   >
-                    <MenuItem onClick={handleClose}>Web</MenuItem>
+                    <MenuItem
+                    onClick={handleClose}
+                    onMouseEnter={(e) => (
+                      (e.target.style.color = "#ffff"),
+                      (e.target.style.backgroundColor = "#171c48")
+                    )}
+                    onMouseLeave={(e) => (
+                      (e.target.style.color = "#495054"),
+                      (e.target.style.backgroundColor = "#ffff")
+                    )}
+                    style={{ borderLeft: "2px solid #171c48" }}
+                  >Web</MenuItem>
                     <Divider /> 
-                    <MenuItem onClick={handleClose}>Java</MenuItem>
+                    <MenuItem
+                    onClick={handleClose}
+                    onMouseEnter={(e) => (
+                      (e.target.style.color = "#ffff"),
+                      (e.target.style.backgroundColor = "#171c48")
+                    )}
+                    onMouseLeave={(e) => (
+                      (e.target.style.color = "#495054"),
+                      (e.target.style.backgroundColor = "#ffff")
+                    )}
+                    style={{ borderLeft: "2px solid #171c48" }}
+                  >Java</MenuItem>
                     <Divider /> 
-                    <MenuItem onClick={handleClose}>Mobile</MenuItem>
+                    <MenuItem
+                    onClick={handleClose}
+                    onMouseEnter={(e) => (
+                      (e.target.style.color = "#ffff"),
+                      (e.target.style.backgroundColor = "#171c48")
+                    )}
+                    onMouseLeave={(e) => (
+                      (e.target.style.color = "#495054"),
+                      (e.target.style.backgroundColor = "#ffff")
+                    )}
+                    style={{ borderLeft: "2px solid #171c48" }}
+                  >Mobile</MenuItem>
                      <Divider /> 
-                    <MenuItem onClick={handleClose}>Database</MenuItem>
+                    <MenuItem
+                    onClick={handleClose}
+                    onMouseEnter={(e) => (
+                      (e.target.style.color = "#ffff"),
+                      (e.target.style.backgroundColor = "#171c48")
+                    )}
+                    onMouseLeave={(e) => (
+                      (e.target.style.color = "#495054"),
+                      (e.target.style.backgroundColor = "#ffff")
+                    )}
+                    style={{ borderLeft: "2px solid #171c48" }}
+                  >Database</MenuItem>
                     <Divider /> 
-                    <MenuItem onClick={handleClose}>Others</MenuItem>
+                    <MenuItem
+                    onClick={handleClose}
+                    onMouseEnter={(e) => (
+                      (e.target.style.color = "#ffff"),
+                      (e.target.style.backgroundColor = "#171c48")
+                    )}
+                    onMouseLeave={(e) => (
+                      (e.target.style.color = "#495054"),
+                      (e.target.style.backgroundColor = "#ffff")
+                    )}
+                    style={{ borderLeft: "2px solid #171c48" }}
+                  >Others</MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
