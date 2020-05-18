@@ -61,7 +61,7 @@ export default function MenuAppBar() {
   return (
     <div>
       {source ? (
-      <AppBar position="static" color="background">
+      <AppBar position="sticky" color="background">
         <Toolbar className={classes.root}>
           <img
             src="logo-brand.png"

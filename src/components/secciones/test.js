@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     div1:{
         paddingLeft:'10vw',
         paddingRight:'10vw',
+        alignSelf:'center',
     },
     text:{
         width:'30vw',
@@ -54,18 +55,18 @@ const useStyles = makeStyles((theme) => ({
             lineHeight: '10px',
         },
         [theme.breakpoints.up("sm")]: {
-            paddingTop:1,
+          //  paddingTop:1,
             fontSize: "12px",
         lineHeight: '20px',
         },
         [theme.breakpoints.up("md")]: {
         fontSize: "12px",
-        paddingTop:5,
+       // paddingTop:5,
         
         },
         [theme.breakpoints.up("lg")]: {
         fontSize: "18px",
-        paddingTop:30,
+        //paddingTop:30,
         },
     },
     divimg:{
