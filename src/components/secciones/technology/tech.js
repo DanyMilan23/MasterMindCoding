@@ -1,30 +1,40 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
 import { makeStyles } from "@material-ui/core/styles";
 
-const defaultProps = {
-  bgcolor: 'background.paper',
-  borderColor: 'text.primary',
-  
-  m: 1,
-  border: 1,
-  style: { width: '106px', height: '106px' },
-};
+
 
 const useStyles = makeStyles(theme => ({
-   cont:{
-       paddingTop:20,
-       paddingLeft:17,
+   img:{
+       //paddingTop:20,
+       //paddingLeft:17,
+        [theme.breakpoints.down("sm")]: {
+            paddingTop:5,
+            width:45,
+            height:45,  
+        },
+        [theme.breakpoints.up("sm")]: {
+            width:70,
+            height:70,
+            
+        },
+        [theme.breakpoints.up("md")]: {
+            width:100,
+            height:100,
+            
+        },
+        [theme.breakpoints.up("lg")]: {
+            width:103,
+            height:103,
+            
+        },
    }
 }))
 
 const tech = ({imagen,estilos}) => {
     const classes = useStyles();
     return (
-        <div>
-            <Box  borderRadius="50%" {...defaultProps} >
-                    <img src={imagen} className={estilos}/>             
-            </Box>
+        <div>       
+            <img src={imagen} className={classes.img}/>             
         </div>
     );
 };

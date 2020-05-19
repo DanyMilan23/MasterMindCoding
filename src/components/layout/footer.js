@@ -63,9 +63,6 @@ export default function StickyFooter() {
         <Misionvision/>
         <Contact/>
         <Minifooter/>
-        
-        <img src='wip2.jpg' className={classes.imagen}/>
-        
       </footer>
     </div>
   );
