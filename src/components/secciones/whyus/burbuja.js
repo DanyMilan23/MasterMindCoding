@@ -36,7 +36,9 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     paddingTop:0,
-    width: "auto",
+    width: "35vw",
+    paddingLeft:"8vw",
+    paddingRight:"",
     height: "auto",
     [theme.breakpoints.down("sm")]: {
       width: "auto",
@@ -55,7 +57,7 @@ const burbuja = ({descripcion}) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-        <Box borderRadius={'15px 40px 40px 15px'} {...defaultProps} className={classes.container} boxShadow={20} >
+        <Box borderRadius={'15px 40px 40px 15px'} {...defaultProps}  boxShadow={20} >
             <Typography className={classes.burbuja}>
             <b>
             {descripcion}
