@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import Ayuda from "../../grid";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -43,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subTitle: {
-    //fontSize: "36px",
     lineHeight: "48px",
     color: "#171c48",
     fontFamily: "'Roboto', sans-serif",
@@ -68,7 +66,6 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     paddingTop: "100px",
-    //fontSize: "32px",
     lineHeight: "45px",
     fontWeight: 400,
     color: "#171c48",

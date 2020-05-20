@@ -1,12 +1,8 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 
-
-
 const useStyles = makeStyles(theme => ({
    img:{
-       //paddingTop:20,
-       //paddingLeft:17,
         [theme.breakpoints.down("sm")]: {
             paddingTop:5,
             width:45,
@@ -14,18 +10,15 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up("sm")]: {
             width:70,
-            height:70,
-            
+            height:70,     
         },
         [theme.breakpoints.up("md")]: {
             width:100,
             height:100,
-            
         },
         [theme.breakpoints.up("lg")]: {
             width:103,
-            height:103,
-            
+            height:103,    
         },
    }
 }))

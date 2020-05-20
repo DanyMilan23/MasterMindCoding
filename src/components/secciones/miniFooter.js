@@ -7,14 +7,11 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
-    container:{
-        
+    container:{  
         paddingTop:30,
         paddingBottom:20
     },
-   
-    img:{
-        
+    img:{   
         [theme.breakpoints.down("sm")]: {
             width:125,
             height:23,
@@ -43,17 +40,11 @@ function miniFooter(props) {
     const classes = useStyles();
     return (
         <>
-            <Container className={classes.container} maxWidth>
-                
+            <Container className={classes.container} maxWidth>  
                     <img className={classes.img} src='logo-brand.png'/>
-                
-        
                         <FacebookIcon  style={{ color:'#3b5998' }}/>
                         <LinkedInIcon style={{ color:'#0e76a8' }}/> 
-                        <TwitterIcon  style={{ color:'#00acee' }}/>
-                         
-              
-                
+                        <TwitterIcon  style={{ color:'#00acee' }}/>  
             </Container>            
         </>
     );

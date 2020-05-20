@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 //Component
-import Valores from './valores'
+import Valores from '../secciones/Whyus/valores'
 
 const useStyles = makeStyles((theme) => ({
    title: {

@@ -11,14 +11,6 @@ import Burbuja from "./burbuja";
 
 //estilos
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
   title: {
     fontSize: "60px",
     lineheight: "20px",
@@ -48,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: 20,
       paddingTop: 10,
     },
-   
+
     lineHeight: "34px",
     color: "#171c48",
     fontFamily: "'Robot', sans-serif",
@@ -56,8 +48,8 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "-1px",
   },
   subtitle2: {
-     [theme.breakpoints.down("sm")]: {
-       fontSize: "16px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
       paddingLeft: 55,
       paddingTop: 5,
     },
@@ -83,8 +75,8 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "-1px",
   },
   subtitle3: {
-   [theme.breakpoints.down("sm")]: {
-       fontSize: "16px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
       paddingLeft: 55,
       paddingTop: 25,
     },
@@ -102,7 +94,6 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "32px",
       paddingLeft: 20,
       paddingTop: 25,
-      
     },
     lineHeight: "28px",
     color: "#171c48",
@@ -112,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle4: {
     [theme.breakpoints.down("sm")]: {
-       fontSize: "16px",
+      fontSize: "16px",
       paddingLeft: 55,
       paddingTop: 35,
     },
@@ -138,8 +129,8 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "-1px",
   },
   subtitle5: {
-   [theme.breakpoints.down("sm")]: {
-       fontSize: "16px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
       paddingLeft: 55,
       paddingTop: 25,
     },
@@ -156,8 +147,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       fontSize: "28px",
       paddingLeft: 20,
-      paddingTop:20,
-     
+      paddingTop: 20,
     },
     lineHeight: "34px",
     color: "#171c48",
@@ -167,7 +157,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   subtitle: {
-   
     [theme.breakpoints.down("sm")]: {
       paddingTop: 1,
       fontSize: "12px",
@@ -183,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "16px",
       paddingLeft: 20,
     },
-     [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("lg")]: {
       fontSize: "16px",
       paddingLeft: 20,
       paddingTop: 5,
@@ -196,38 +185,20 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     letterSpacing: "-1px",
   },
-  /*img: {
-    //height:'18vh',
-    //width:'18vh',
-    paddingLeft: "20px",
-    height: "72px",
-    width: "68px",
-  },*/
-  burbuja: {
-    paddingLeft: 20,
-    paddingTop: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    height: "auto",
-    width: "30vw",
-    fontSize: "16px",
-    lineHeight: "20px",
-    color: "#17457f",
-    fontFamily: "'Robot', sans-serif",
-    fontWeight: 400,
-    letterSpacing: "-1px",
-    [theme.breakpoints.down("sm")]: {
-      width: "90vw",
-      fontSize: "12px",
-      height: "auto",
-      paddingLeft: 5,
-      paddingTop: 5,
-      paddingRight: 5,
-      paddingBottom: 5,
-    },
-  },
   container: {
     marginBottom: 30,
+    display: "flex",
+  },
+  burbuja: {
+    width: "35vw",
+    paddingLeft: "8vw",
+    paddingRight: "7vw",
+  },
+  icon: {
+    width: "8vw",
+  },
+  desc: {
+    width: "35vw",
   },
 }));
 
@@ -239,89 +210,76 @@ const valor = ({
   tipo,
   estado,
   funcion,
-  estilos,
+ 
 }) => {
   const classes = useStyles();
   const [source, setSource] = useState(false);
   //media querys
-  const matches = useMediaQuery("(min-width:1280px)");
+  const matches = useMediaQuery("(min-width:1023px)");
   useEffect(() => {
     setSource(matches);
   }, [matches]);
   return (
-    <div>
-      <Container className={classes.container} maxWidth>
-        <Grid
-          container
-          spacing={1}
-          direction="row"
-          justify="flex-start"
-          alignItems="flex-start"
-        >
-          {/** Burbuja en posicion de escritorio */}          
-          {source ? <Grid item xs={false} md={1} lg={1} /> : null}
-          {source ? (
-            <Grid item xs={false} md={4} lg={4}>
-              {estado ? <Burbuja descripcion={descripcion} /> : null}
-            </Grid>
-          ) : null}
-          {source ? <Grid item xs={false} md={1} lg={1} /> : null}
-          {/*source ? <Grid item xs={false} md={1} lg={1} /> : null*/}
-          {/** imagen*/}
-          <Grid item xs={2} md={2} lg={1}>
-            <IconButton onClick={funcion}>
-              <img src={imagen} style={estilos} />
-            </IconButton>
-          </Grid>
-          {/** Descripcion */}
-          <Grid item xs={10} md={10} lg={4}>
-            {tipo == 1 ? (
-              <Typography className={classes.subtitle1}>
-                <Link href="#" onClick={funcion}>
-                  {titulo}
-                </Link>
-              </Typography>
-            ) : null}
-            {tipo == 2 ? (
-              <Typography className={classes.subtitle2}>
-                <Link href="#" onClick={funcion}>
-                  {titulo}
-                </Link>
-              </Typography>
-            ) : null}
-            {tipo == 3 ? (
-              <Typography className={classes.subtitle3}>
-                <Link href="#" onClick={funcion}>
-                  {titulo}
-                </Link>
-              </Typography>
-            ) : null}
-            {tipo == 4 ? (
-              <Typography className={classes.subtitle4}>
-                <Link href="#" onClick={funcion}>
-                  {titulo}
-                </Link>
-              </Typography>
-            ) : null}
-            {tipo == 5 ? (
-              <Typography className={classes.subtitle5}>
-                <Link href="#" onClick={funcion}>
-                  {titulo}
-                </Link>
-              </Typography>
-            ) : null}
-            <Typography className={classes.subtitle}>{resumen}</Typography>
-          </Grid>
-          <Grid item xs={false} md={false} lg={1} />
-          {/** Burbuja en posicion de movil */}
-          {source ? null : (
-            <Grid item xs={12} md={0} lg={0}>
-              {estado ? <Burbuja descripcion={descripcion} /> : null}
-            </Grid>
-          )}
+    <Grid
+      container
+      spacing={1}
+      direction="row"
+      justify="flex-start"
+      alignItems="flex-start"
+    >
+      {/** imagen*/}
+      <Grid item xs={2} md={2} lg={2}>
+        <IconButton onClick={funcion}>
+          <img src={imagen}/>
+        </IconButton>
+      </Grid>
+      {/** Descripcion */}
+      <Grid item xs={10} md={10} lg={8}>
+        {tipo == 1 ? (
+          <Typography className={classes.subtitle1}>
+            <Link href="#" onClick={funcion}>
+              {titulo}
+            </Link>
+          </Typography>
+        ) : null}
+        {tipo == 2 ? (
+          <Typography className={classes.subtitle2}>
+            <Link href="#" onClick={funcion}>
+              {titulo}
+            </Link>
+          </Typography>
+        ) : null}
+        {tipo == 3 ? (
+          <Typography className={classes.subtitle3}>
+            <Link href="#" onClick={funcion}>
+              {titulo}
+            </Link>
+          </Typography>
+        ) : null}
+        {tipo == 4 ? (
+          <Typography className={classes.subtitle4}>
+            <Link href="#" onClick={funcion}>
+              {titulo}
+            </Link>
+          </Typography>
+        ) : null}
+        {tipo == 5 ? (
+          <Typography className={classes.subtitle5}>
+            <Link href="#" onClick={funcion}>
+              {titulo}
+            </Link>
+          </Typography>
+        ) : null}
+        <Typography className={classes.subtitle}>{resumen}</Typography>
+      </Grid>
+      <Grid item xs={false} md={false} lg={2} />
+      {/** Burbuja en posicion de movil */}
+      {source ? null : (
+        <Grid item xs={12} md={12} lg={12}>
+          {estado ? <Burbuja descripcion={descripcion} /> : null}
         </Grid>
-      </Container>
-    </div>
+      )}
+    </Grid>
   );
 };
 

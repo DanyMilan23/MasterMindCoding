@@ -10,9 +10,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    //display: "flex"
-  },
   paper: {
     marginRight: theme.spacing(2),
   },
@@ -48,7 +45,6 @@ export default function MenuListComposition() {
     }
   }
 
-  // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
@@ -65,8 +61,6 @@ export default function MenuListComposition() {
         aria-controls={open ? "menu-list-grow" : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
-        //onMouseEnter={handleToggle}
-        //onMouseLeave={handleToggle2}
         color="primary"
       >
         SOLUTIONS

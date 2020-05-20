@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Layout from '../src/components/layout/layout';
-import Carousel from '../src/components/secciones/banner/carousel'
+import Tipo2 from '../src/components/secciones/subMenus/tipo2';
 
 export default function Home() {
   return (
     <>
       <Layout>
-          <Carousel/>
+          <Tipo2/>
       </Layout>
      
     </>

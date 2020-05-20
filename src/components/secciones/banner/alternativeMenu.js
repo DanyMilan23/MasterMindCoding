@@ -5,7 +5,6 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Button from "@material-ui/core/Button";
-import MoreIcon from "@material-ui/icons/MoreVert";
 import MenuIcon from '@material-ui/icons/Menu';
 import Constants from '../../../config/constants'
 
