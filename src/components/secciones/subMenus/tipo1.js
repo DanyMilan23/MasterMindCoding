@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function tipo2(props) {
+function tipo2({title,titleDescription,text1,text2}) {
   const classes = useStyles();
   return (
     <>
@@ -146,26 +146,18 @@ function tipo2(props) {
             alignItems="flex-start"
           >
             <Grid item xs={4} md={4} lg={4}>
-              <Typography className={classes.title}>INDUSTRY</Typography>
+              <Typography className={classes.title}>{title}</Typography>
               <Typography className={classes.subTitle}>
-                Telecom
+                {titleDescription}
               </Typography>
             </Grid>
             <Grid item xs={1} md={1} lg={1} />
             <Grid item xs={6} md={6} lg={6}>
               <Typography className={classes.text}>
-                The telecom industry involves
-                communications companies and
-                providers of mobile devices, mobile
-                applications as well as Internet and
-                video streaming services.
+               {text1}
               </Typography>
               <Typography className={classes.subtext}>
-                Our team of software developers has taken
-                on a range of telecommunication software
-                projects with great success. We are an
-                expert team ready for any telecom software
-                project. 
+                {text2} 
               </Typography>
             </Grid>
           </Grid>

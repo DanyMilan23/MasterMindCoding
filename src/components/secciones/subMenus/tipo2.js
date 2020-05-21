@@ -139,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function tipo2(props) {
+function tipo2({title,titleDescription,text1,text2}) {
   const classes = useStyles();
   return (
     <>
@@ -153,29 +153,18 @@ function tipo2(props) {
             alignItems="flex-start"
           >
             <Grid item xs={4} md={4} lg={4}>
-              <Typography className={classes.title}>SOLUTIONS</Typography>
+              <Typography className={classes.title}>{title}</Typography>
               <Typography className={classes.subTitle}>
-                Custom Software Development
+                {titleDescription}
               </Typography>
             </Grid>
             <Grid item xs={1} md={1} lg={1} />
             <Grid item xs={6} md={6} lg={6}>
               <Typography className={classes.text}>
-                <b>
-                  We provide full cycle product development, including design,
-                  implementation, QA and production deployment.
-                  <br />
-                  Our partners trust us to build custom Tech solutions for:{" "}
-                </b>
+                {text1}
               </Typography>
               <Typography className={classes.subtext}>
-                • Architectural Design. <br />
-                • Software Product Development. <br />
-                • Product Design Sprint. <br />
-                • Quality assurance on development. <br />
-                • Test automation during and post development phase. <br />
-                • Software support and maintenance.
-                <br />
+                {text2}
               </Typography>
             </Grid>
           </Grid>
