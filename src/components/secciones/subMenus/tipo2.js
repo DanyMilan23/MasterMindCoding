@@ -100,6 +100,7 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "30px",
         fontSize: "10px",
         lineHeight: "13px",
+        paddingBottom:'70px',
     },
     [theme.breakpoints.up("sm")]: {
         fontSize: "15px",
@@ -109,12 +110,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
         fontSize: "25px",
         lineHeight: "23px",
-        paddingBottom:'170px',
+        paddingBottom:'230px',
     },
     [theme.breakpoints.up("lg")]: {
         fontSize: "30px",
         lineHeight: "47px",
-        paddingBottom:'60px',
+        paddingBottom:'150px',
     },
   },
   div: {

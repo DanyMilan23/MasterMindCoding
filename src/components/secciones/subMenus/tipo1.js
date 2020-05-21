@@ -118,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
         fontSize: "30px",
         lineHeight: "47px",
-        paddingBottom:'170px',
+        paddingBottom:'270px',
     },
   },
   div: {
