@@ -101,19 +101,19 @@ const valores = (props) => {
         <div className={classes.containerBurbuja}>
           {valor.val1 ? (
             <Burbuja descripcion={desc1} className={classes.burbuja} />
-          ) : <div className={classes.step}/>}
+          ) : <div style={{ height:130}}/>}
           {valor.val2 ? (
             <Burbuja descripcion={desc2} className={classes.burbuja} />
-          ) : <div className={classes.step}/>}
+          ) : <div style={{ height:115}}/>}
           {valor.val3 ? (
             <Burbuja descripcion={desc3} className={classes.burbuja} />
-          ) : <div className={classes.step}/>}
+          ) : <div style={{ height:135}}/>}
           {valor.val4 ? (
             <Burbuja descripcion={desc4} className={classes.burbuja} />
-          ) : <div className={classes.step}/>}
+          ) : <div style={{ height:120}}/>}
           {valor.val5 ? (
             <Burbuja descripcion={desc5} className={classes.burbuja} />
-          ) : <div className={classes.step}/>}
+          ) :null}
         </div>
       ) : null}
 

@@ -62,7 +62,7 @@ const technology = props => {
     
     return (
         <div>
-            <Container className={classes.carousel} maxWidth>
+            <Container infinite className={classes.carousel} maxWidth>
                 <Grid
                 container
                 spacing={1}

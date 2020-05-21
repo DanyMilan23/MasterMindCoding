@@ -9,6 +9,7 @@ import Router from "next/router";
 //Menu
 import MenuButton from "../secciones/banner/menuButtons";
 import AlternativeMenu from '../secciones/banner/alternativeMenu'
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuAppBar() {
+export default function MenuAppBar({f1,f2,f3}) {
   const classes = useStyles();
   //states
   const [source, setSource] = useState(false);
@@ -51,11 +52,14 @@ export default function MenuAppBar() {
       {source ? (
       <AppBar position="sticky" color="background">
         <Toolbar className={classes.root}>
-          <img
+          <IconButton>
+            <img
             src="logo-brand.png"
             className={classes.image}
+            onClick={f1}
           />
-          <MenuButton />
+          </IconButton>
+          <MenuButton f2={f2} f3={f3}/>
         </Toolbar>
       </AppBar>):(<AlternativeMenu/>)}   
     </div>
