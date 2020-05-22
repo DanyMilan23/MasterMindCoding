@@ -52,13 +52,11 @@ export default function MenuAppBar({f1,f2,f3}) {
       {source ? (
       <AppBar position="sticky" color="background">
         <Toolbar className={classes.root}>
-          <IconButton>
             <img
             src="logo-brand.png"
             className={classes.image}
             onClick={f1}
           />
-          </IconButton>
           <MenuButton f2={f2} f3={f3}/>
         </Toolbar>
       </AppBar>):(<AlternativeMenu/>)}   

@@ -101,7 +101,7 @@ export default function MenuListComposition({funcion}) {
                     )}
                     style={{ borderLeft: "2px solid #171c48" }}
                   >
-                    Is Staff
+                    IT Staff
                   </MenuItem>
                   <Divider />
                   <MenuItem
