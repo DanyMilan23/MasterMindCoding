@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuAppBar({f1,f2,f3}) {
+export default function MenuAppBar({f1,f2,f3,f4,f5,f6,f7}) {
   const classes = useStyles();
   //states
   const [source, setSource] = useState(false);
@@ -57,7 +57,7 @@ export default function MenuAppBar({f1,f2,f3}) {
             className={classes.image}
             onClick={f1}
           />
-          <MenuButton f2={f2} f3={f3}/>
+          <MenuButton f2={f2} f3={f3} f4={f4} f5={f5} f6={f6} f7={f7}/>
         </Toolbar>
       </AppBar>):(<AlternativeMenu/>)}   
     </div>

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuAppBar({f2,f3}) {
+export default function MenuAppBar({f2,f3,f4,f5,f6,f7}) {
   const classes = useStyles();
   const [menu,setMenu]=useState({
     menu1:false,
@@ -30,12 +30,12 @@ export default function MenuAppBar({f2,f3}) {
     <div className={classes.container}>
       <Solutions className={classes.boton} funcion={f2}/>
       <Industry className={classes.boton} funcion={f3}/>
-      <Technology className={classes.boton} funcion={f2}/>
-      <Button color="primary" className={classes.boton} onClick={f3}>
+      <Technology className={classes.boton} funcion={f4}/>
+      <Button color="primary" className={classes.boton} onClick={f5}>
         {Constants.STRINGS.CAREERS}
       </Button>
-      <About className={classes.boton} funcion={f2}/>
-      <Button color="primary" className={classes.boton} onClick={f3}>
+      <About className={classes.boton} funcion={f6}/>
+      <Button color="primary" className={classes.boton} onClick={f7}>
         {Constants.STRINGS.CONTACT}
       </Button>
     </div>
