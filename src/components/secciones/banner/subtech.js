@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function MenuListComposition() {
+export default function MenuListComposition({funcion}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -38,7 +38,7 @@ export default function MenuListComposition() {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
-
+    funcion()
     setOpen(false);
   };
 

@@ -30,12 +30,12 @@ export default function MenuAppBar({f2,f3}) {
     <div className={classes.container}>
       <Solutions className={classes.boton} funcion={f2}/>
       <Industry className={classes.boton} funcion={f3}/>
-      <Technology className={classes.boton}/>
-      <Button color="primary" className={classes.boton}>
+      <Technology className={classes.boton} funcion={f2}/>
+      <Button color="primary" className={classes.boton} onClick={f3}>
         {Constants.STRINGS.CAREERS}
       </Button>
-      <About className={classes.boton}/>
-      <Button color="primary" className={classes.boton}>
+      <About className={classes.boton} funcion={f2}/>
+      <Button color="primary" className={classes.boton} onClick={f3}>
         {Constants.STRINGS.CONTACT}
       </Button>
     </div>

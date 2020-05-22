@@ -28,7 +28,7 @@ export default function MenuListComposition({funcion}) {
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
-    funcion()
+    
   };
   const handleToggle2 = () => {
     setOpen(false);
@@ -38,7 +38,7 @@ export default function MenuListComposition({funcion}) {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
-
+    funcion()
     setOpen(false);
   };
 
