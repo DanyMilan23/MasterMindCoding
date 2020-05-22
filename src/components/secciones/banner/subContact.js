@@ -10,9 +10,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
   paper: {
     marginRight: theme.spacing(2),
   },
@@ -21,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuListComposition({f61,f62}) {
+export default function MenuListComposition({f71,f72}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -47,7 +44,6 @@ export default function MenuListComposition({f61,f62}) {
     }
   }
 
-
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
@@ -66,7 +62,7 @@ export default function MenuListComposition({f61,f62}) {
         onClick={handleToggle}
         color="primary"
       >
-        ABOUT US
+        CONTACT
       </Button>
       <Popper
         open={open}
@@ -92,7 +88,7 @@ export default function MenuListComposition({f61,f62}) {
                   color="primary"
                 >
                   <MenuItem
-                    onClick={()=>{handleClose;f61()}}
+                    onClick={()=>{handleClose;f71()}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -103,11 +99,11 @@ export default function MenuListComposition({f61,f62}) {
                     )}
                     style={{ borderLeft: "2px solid #171c48" }}
                   >
-                    Privacy Policy
+                    Send us a Message
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{handleClose;f62()}}
+                    onClick={()=>{handleClose;f72()}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -118,8 +114,8 @@ export default function MenuListComposition({f61,f62}) {
                     )}
                     style={{ borderLeft: "2px solid #171c48" }}
                   >
-                    Who we are,Our Values
-                  </MenuItem>
+                    Request a Quote
+                  </MenuItem>    
                 </MenuList>
               </ClickAwayListener>
             </Paper>

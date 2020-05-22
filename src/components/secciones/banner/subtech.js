@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function MenuListComposition({funcion}) {
+export default function MenuListComposition({f41,f42,f43,f44,f45}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -38,7 +38,6 @@ export default function MenuListComposition({funcion}) {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
-    funcion()
     setOpen(false);
   };
 
@@ -95,7 +94,7 @@ export default function MenuListComposition({funcion}) {
                     color='primary'
                   >
                     <MenuItem
-                    onClick={handleClose}
+                    onClick={()=>{handleClose;f41()}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -108,7 +107,7 @@ export default function MenuListComposition({funcion}) {
                   >Web</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={handleClose}
+                    onClick={()=>{handleClose;f42()}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -121,7 +120,7 @@ export default function MenuListComposition({funcion}) {
                   >Java</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={handleClose}
+                    onClick={()=>{handleClose;f43()}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -134,7 +133,7 @@ export default function MenuListComposition({funcion}) {
                   >Mobile</MenuItem>
                      <Divider /> 
                     <MenuItem
-                    onClick={handleClose}
+                    onClick={()=>{handleClose;f44()}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -147,7 +146,7 @@ export default function MenuListComposition({funcion}) {
                   >Database</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={handleClose}
+                    onClick={()=>{handleClose;f45()}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
