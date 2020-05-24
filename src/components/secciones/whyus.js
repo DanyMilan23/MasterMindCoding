@@ -42,10 +42,9 @@ const Whyus = () => {
           alignItems="flex-start"
         >
           {/*Aqui van las 1eras letras */}
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={12} lg={12}>
             <Typography className={classes.title}> WHY US?</Typography>
           </Grid>
-          <Grid  xs={0} md={6} lg={8} />
         </Grid>
       </Container>
       <Valores/>

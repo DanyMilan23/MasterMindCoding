@@ -6,7 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Mapita from '../map'
-import Email from '../email'
 
 const useStyles = makeStyles(theme => ({
     title: {
@@ -95,11 +94,7 @@ function contact(props) {
         body:'',
     })
     const handlePress = () => {
-      fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: email.name, email: email.email })
-      });
+      
     }
     return (
         <div>
