@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuAppBar({funcion}) {
+export default function MenuAppBar({funcion,scroll}) {
   const classes = useStyles();
   //states
   const [source, setSource] = useState(false);
@@ -59,6 +59,7 @@ export default function MenuAppBar({funcion}) {
           />
           <MenuButton 
             funcion={funcion}
+            scroll={scroll}
           />
         </Toolbar>
       </AppBar>):(<AlternativeMenu/>)}   

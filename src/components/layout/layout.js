@@ -1,9 +1,21 @@
-import React from 'react';
+import React,{ useRef, useEffect} from 'react';
 import Header from './header';
 import Footer from './footer';
 import Head from 'next/head';
+import Whyus from '../secciones/whyus'
+import Techonology from '../secciones/technology';
+import Misionvision from '../secciones/misionvision'
+import Contact from '../secciones/contact'
+import Minifooter from '../secciones/miniFooter'
+import Ourwork from '../secciones/ourWork'
+
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
 
 const Layout = props => {
+    const myRef = useRef(null)
+
+    const executeScroll = () => scrollToRef(myRef)
+
     return ( 
         <>
             <Head>
@@ -12,11 +24,19 @@ const Layout = props => {
             </Head>
             <Header 
                 funcion={props.funcion}
+                scroll={executeScroll}
             />
             <main>
                 {props.children}
             </main>
-            <Footer/>
+            <Whyus/>
+            <Techonology/>
+            <Ourwork/>
+            <Misionvision/>
+            <div ref={myRef}>
+                <Contact/>
+            </div>
+            <Minifooter/>      
         </>
      );
 }

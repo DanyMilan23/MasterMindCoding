@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuAppBar({funcion}) {
+export default function MenuAppBar({funcion,scroll}) {
   const classes = useStyles();
   const [menu,setMenu]=useState({
     menu1:false,
@@ -35,7 +35,7 @@ export default function MenuAppBar({funcion}) {
       <Technology className={classes.boton} funcion={funcion}/>
       <Careers className={classes.boton}  funcion={funcion}/>
       <About className={classes.boton} funcion={funcion}/>
-      <Contact className={classes.boton} funcion={funcion}/>
+      <Contact className={classes.boton} funcion={funcion} scroll={scroll}/>
     </div>
   );
 }

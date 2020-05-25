@@ -88,7 +88,7 @@ const places = [
     id: 1,
   },
 ];
-function contact(props) {
+function contact({myref}) {
     const classes = useStyles();
     const [email,setEmail]=useState({
         name:'',
@@ -99,7 +99,7 @@ function contact(props) {
       
     }
     return (
-        <div>
+        <div ref={myref}>
             <Container className={classes.container} maxWidth>
                 <Grid 
                 container

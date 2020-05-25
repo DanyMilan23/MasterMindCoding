@@ -14,11 +14,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function StickyFooter() {
+export default function StickyFooter({ref}) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={ref}>
       <footer>
         <Whyus/>
         <Techonology/>
