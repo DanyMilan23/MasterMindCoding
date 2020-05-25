@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuListComposition({f51,f52}) {
+export default function MenuListComposition({funcion}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -88,7 +88,7 @@ export default function MenuListComposition({f51,f52}) {
                   color="primary"
                 >
                   <MenuItem
-                    onClick={()=>{handleClose;f51()}}
+                    onClick={()=>{handleClose;funcion('life')}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -103,7 +103,7 @@ export default function MenuListComposition({f51,f52}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{handleClose;f52()}}
+                    onClick={()=>{handleClose;funcion('jobs')}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")

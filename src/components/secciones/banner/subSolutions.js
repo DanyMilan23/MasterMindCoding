@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuListComposition({f21,f22,f23,f24}) {
+export default function MenuListComposition({funcion}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -88,7 +88,7 @@ export default function MenuListComposition({f21,f22,f23,f24}) {
                   color="primary"
                 >
                   <MenuItem
-                    onClick={()=>{handleClose;f21()}}
+                    onClick={()=>{handleClose;funcion('staff')}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -103,7 +103,7 @@ export default function MenuListComposition({f21,f22,f23,f24}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{handleClose;f22()}}
+                    onClick={()=>{handleClose;funcion('assure')}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -118,7 +118,7 @@ export default function MenuListComposition({f21,f22,f23,f24}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                     onClick={()=>{handleClose;f23()}}
+                     onClick={()=>{handleClose;funcion('main')}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -133,7 +133,7 @@ export default function MenuListComposition({f21,f22,f23,f24}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                     onClick={()=>{handleClose;f24()}}
+                     onClick={()=>{handleClose;funcion('dev')}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")

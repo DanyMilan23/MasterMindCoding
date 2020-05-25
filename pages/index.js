@@ -7,92 +7,6 @@ import Tipo2 from "../src/components/secciones/subMenus/tipo2";
 
 export default function Home() {
   const [menu, setMenu] = useState("home");
-  const f1 = () => {
-    setMenu("home");
-  };
-  const f21 = () => {
-    setMenu("staff");
-    
-  };
-  const f22 = () => {
-    setMenu("assure");
-   
-  };
-  const f23 = () => {
-     setMenu("main");
-    
-  };
-  const f24 = () => {
-    setMenu("dev");
-    
-  };
-  const f31 = () => {
-    setMenu("telecom");
-    
-  };
-  const f32 = () => {
-    setMenu("banking");
-    
-  };
-  const f33 = () => {
-    setMenu("ecomerce");
-    
-  };
-  const f34 = () => {
-    setMenu("retail");
-    
-  };
-  const f35 = () => {
-    setMenu("emark");
-    
-  };
-  const f36 = () => {
-    setMenu("manu");
-    
-  };
-  const f37 = () => {
-    setMenu("health");
-    
-  };
-  const f38 = () => {
-    setMenu("energy");
-  };
-  const f39 = () => {
-    setMenu("automotive");
-  };
-  const f41 = () => {
-    setMenu("web");
-  };
-  const f42 = () => {
-    setMenu("java");
-  };
-  const f43 = () => {
-    setMenu("mobile");
-  };
-  const f44 = () => {
-    setMenu("database");
-  };
-  const f45 = () => {
-    setMenu("others");
-  };
-  const f51 = () => {
-    setMenu("life");
-  };
-  const f52 = () => {
-    setMenu("jobs");
-  };
-  const f61 = () => {
-    setMenu("privacy");
-  };
-  const f62 = () => {
-    setMenu("whoweare");
-  };
-  const f71 = () => {
-    setMenu("home");
-  };
-  const f72 = () => {
-    setMenu("request");
-  };
   //Solutions
   const titleSolutions = "SOLUTIONS";
   const titleDescriptionSolutions = "Custom Software Development";
@@ -184,31 +98,7 @@ export default function Home() {
   return (
     <>
       <Layout
-        f1 ={f1}
-        f21={f21}
-        f22={f22}
-        f23={f23}
-        f24={f24}
-        f31={f31}
-        f32={f32}
-        f33={f33}
-        f34={f34}
-        f35={f35}
-        f36={f36}
-        f37={f37}
-        f38={f38}
-        f39={f39}
-        f41={f41}
-        f42={f42}
-        f43={f43}
-        f44={f44}
-        f45={f45}
-        f51={f51}
-        f52={f52}
-        f61={f61}
-        f62={f62}
-        f71={f71}
-        f72={f72}
+        funcion={(value)=>{console.log(value);setMenu(value)}}
       >
         {menu == 'home' ? <Carousel /> : null}
         {/*Solutions */}
