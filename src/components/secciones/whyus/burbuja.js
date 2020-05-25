@@ -31,12 +31,24 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     paddingTop:0,
-    width: "35vw",
     paddingLeft:"8vw",
-    paddingRight:"",
+    
     height: "auto",
     [theme.breakpoints.down("sm")]: {
       width: "auto",
+      paddingRight:"8vw",
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: "auto",
+      paddingRight:"8vw",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "auto",
+      paddingRight:"8vw",
+    },
+    [theme.breakpoints.up("lg")]: {
+       width: "35vw",
+      paddingRight:"8vw",
     },
   },
   

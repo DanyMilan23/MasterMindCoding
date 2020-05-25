@@ -319,7 +319,7 @@ export default function Home() {
         ) : null}
         {/**tech */}
         {menu == 'web' ? (
-          <Tipo1
+          <Tipo2
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -327,7 +327,7 @@ export default function Home() {
           />
         ) : null}
         {menu == 'java' ? (
-          <Tipo1
+          <Tipo2
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -335,7 +335,7 @@ export default function Home() {
           />
         ) : null}
         {menu == 'mobile' ? (
-          <Tipo1
+          <Tipo2
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -343,7 +343,7 @@ export default function Home() {
           />
         ) : null}
         {menu == 'database' ? (
-          <Tipo1
+          <Tipo2
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -351,7 +351,7 @@ export default function Home() {
           />
         ) : null}
         {menu == 'others' ? (
-          <Tipo1
+          <Tipo2
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -360,7 +360,7 @@ export default function Home() {
         ) : null}
         {/**careers */}
         {menu == 'life' ? (
-          <Tipo2
+          <Tipo1
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -368,7 +368,7 @@ export default function Home() {
           />
         ) : null}
         {menu == 'jobs' ? (
-          <Tipo2
+          <Tipo1
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -377,7 +377,7 @@ export default function Home() {
         ) : null}
         {/**about us */}
         {menu == 'privacy' ? (
-          <Tipo1
+          <Tipo2
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -385,7 +385,7 @@ export default function Home() {
           />
         ) : null}
         {menu == 'whoweare' ? (
-          <Tipo1
+          <Tipo2
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}
@@ -394,7 +394,7 @@ export default function Home() {
         ) : null}
         {/**Contact */}
         {menu == 'request' ? (
-          <Tipo2
+          <Tipo1
             title={titleIndustry}
             titleDescription={titleDescriptionIndustry}
             text1={text1Industry}

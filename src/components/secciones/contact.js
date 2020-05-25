@@ -53,6 +53,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   info:{
+    //width:'20vw',
     paddingLeft:20,
     paddingTop:75,    
     width:'auto',
@@ -65,6 +66,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     [theme.breakpoints.down("sm")]: {
          paddingTop:20,
+         // width:'80vw',
     },
   },
    text:{
@@ -126,7 +128,7 @@ function contact(props) {
                             <Grid item xs={12} md={12} lg={12}>
                                 <Typography className={classes.title}>CONTACT</Typography>
                             </Grid>
-                            <Grid item xs={12} md={6} lg={6} >
+                            <Grid item xs={12} md={7} lg={6} >
                                 <Typography className={classes.info}>
                                     7901 4TH ST N STE 4238, <br/>
                                     ST. PETERSBURG, FL 33702<br/>
@@ -184,7 +186,6 @@ function contact(props) {
                                
                                
                             </Grid>
-                            <Grid item  xs={1} md={1} lg={1}/>
                             <Grid item  xs={9} md={10} lg={10}/>
                             <Grid item  xs={3} md={2} lg={2}>
                                  <Button size="small" variant="contained" color="primary" onClick={handlePress} >

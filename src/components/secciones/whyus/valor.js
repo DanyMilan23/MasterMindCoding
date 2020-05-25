@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "28px",
       paddingLeft: 20,
       paddingTop: 10,
+      width:'35vw'
     },
 
     lineHeight: "34px",
@@ -67,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "28px",
       paddingLeft: 20,
       paddingTop: 20,
+      width:'35vw'
     },
     lineHeight: "34px",
     color: "#171c48",
@@ -94,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "32px",
       paddingLeft: 20,
       paddingTop: 25,
+      width:'35vw'
     },
     lineHeight: "28px",
     color: "#171c48",
@@ -121,6 +124,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "28px",
       paddingLeft: 20,
       paddingTop: 30,
+      width:'35vw'
     },
     lineHeight: "34px",
     color: "#171c48",
@@ -148,6 +152,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "28px",
       paddingLeft: 20,
       paddingTop: 20,
+      width:'35vw'
     },
     lineHeight: "34px",
     color: "#171c48",
@@ -176,6 +181,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "16px",
       paddingLeft: 20,
       paddingTop: 5,
+      width:'25vw'
     },
 
     // fontSize: "16px",
@@ -276,7 +282,7 @@ const valor = ({
       <Grid item xs={false} md={false} lg={2} />
       {/** Burbuja en posicion de movil */}
       {source ? null : (
-        <Grid item xs={12} md={12} lg={12}>
+        <Grid item xs={12} md={10} lg={12}>
           {estado ? <Burbuja descripcion={descripcion} /> : null}
         </Grid>
       )}
