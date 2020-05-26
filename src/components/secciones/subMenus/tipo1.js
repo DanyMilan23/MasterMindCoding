@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       fontSize: "50px",
       lineHeight: "52px",
-      paddingTop: "15vh",
+      paddingTop: "10vh",
     },
   },
   subTitle: {
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       fontSize: "32px",
       lineHeight: "45px",
-      paddingTop: "15vh",
+      paddingTop: "10vh",
     },
   },
   subtext: {
@@ -99,7 +99,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Roboto', sans-serif",
     fontWeight: 300,
     paddingLeft: "40px",
-    //paddingBottom: "20px",
     letterSpacing: "-1px",
     [theme.breakpoints.down("sm")]: {
       paddingLeft: "30px",
@@ -129,6 +128,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 100%",
     backgroundPosition: "center center",
+        [theme.breakpoints.down('sm')]: {
+      height: '32vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '90vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '32vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '90vh',
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: '90vh',
+    },
   },
 }));
 

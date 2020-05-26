@@ -6,7 +6,7 @@ import Tipo1 from "../src/components/secciones/subMenus/tipo1";
 import Tipo2 from "../src/components/secciones/subMenus/tipo2";
 
 export default function Home() {
-  const [menu, setMenu] = useState("home");
+  const [menu, setMenu] = useState("telecom");
   //Solutions
   const titleSolutions = "SOLUTIONS";
   const titleDescriptionSolutions = "Custom Software Development";

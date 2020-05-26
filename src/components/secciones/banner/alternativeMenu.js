@@ -32,10 +32,10 @@ const useStyles = makeStyles(theme => ({
       height: '5vh'
     },
     [theme.breakpoints.up('sm')]: {
-      height: '10vh',
+      height: '5vh',
     },
     [theme.breakpoints.up('md')]: {
-      height: '10vh',
+      height: '5vh',
     },
     [theme.breakpoints.up('lg')]: {
       height: '5vh',

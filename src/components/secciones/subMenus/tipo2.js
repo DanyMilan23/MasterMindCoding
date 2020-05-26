@@ -33,12 +33,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       fontSize: "35px",
       lineHeight: "32px",
-      paddingTop: "5vh",
+      paddingTop: "4vh",
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "50px",
       lineHeight: "52px",
-      paddingTop: "15vh",
+      paddingTop: "5vh",
     },
   },
   subTitle: {
@@ -84,12 +84,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       fontSize: "25px",
       lineHeight: "23px",
-      paddingTop: "5vh",
+      paddingTop: "4vh",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "32px",
+      fontSize: "24px",
       lineHeight: "45px",
-      paddingTop: "15vh",
+      paddingTop: "5vh",
     },
   },
   subtext: {
@@ -116,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: "10vh",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "30px",
+      fontSize: "24px",
       lineHeight: "47px",
       paddingBottom: "20vh",
     },
@@ -127,6 +127,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 100%",
     backgroundPosition: "center center",
+    [theme.breakpoints.down('sm')]: {
+      height: '32vh',
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: '90vh',
+    },
+    [theme.breakpoints.up('md')]: {
+      height: '32vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: '90vh',
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: '90vh',
+    },
   },
 }));
 
