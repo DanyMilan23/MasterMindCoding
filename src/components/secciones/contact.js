@@ -68,6 +68,9 @@ const useStyles = makeStyles(theme => ({
          paddingTop:20,
          // width:'80vw',
     },
+    [theme.breakpoints.up("lg")]: {
+         paddingTop:20,
+    },
   },
    text:{
    
@@ -128,7 +131,7 @@ function contact({myref}) {
                             <Grid item xs={12} md={12} lg={12}>
                                 <Typography className={classes.title}>CONTACT</Typography>
                             </Grid>
-                            <Grid item xs={12} md={7} lg={6} >
+                            <Grid item xs={12} md={12} lg={6} >
                                 <Typography className={classes.info}>
                                     7901 4TH ST N STE 4238, <br/>
                                     ST. PETERSBURG, FL 33702<br/>

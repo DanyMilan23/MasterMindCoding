@@ -73,11 +73,11 @@ const carouseltech = (props) => {
                 arrows: true
                 },
                 825: {
-                slidesPerPage: 7,
+                slidesPerPage: 5  ,
                 arrows: true
                 },
                 1025: {
-                slidesPerPage: 7,
+                slidesPerPage:7,
                 arrows: true
                 }
             }}

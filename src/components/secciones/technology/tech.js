@@ -9,16 +9,16 @@ const useStyles = makeStyles(theme => ({
             height:45,  
         },
         [theme.breakpoints.up("sm")]: {
-            width:70,
-            height:70,     
+            width:60,
+            height:60,     
         },
         [theme.breakpoints.up("md")]: {
-            width:100,
-            height:100,
+            width:75,
+            height:75,
         },
         [theme.breakpoints.up("lg")]: {
-            width:103,
-            height:103,    
+            width:90,
+            height:90,    
         },
    }
 }))
