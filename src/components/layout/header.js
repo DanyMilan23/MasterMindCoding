@@ -8,7 +8,7 @@ import Link from "next/link";
 import Router from "next/router";
 //Menu
 import MenuButton from "../secciones/banner/menuButtons";
-import AlternativeMenu from '../secciones/banner/alternativeMenu'
+import AlternativeMenu from "../secciones/banner/alternativeMenu";
 import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,28 +17,27 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   image: {
-    paddingTop:10 ,
-    paddingBottom:10,
-    [theme.breakpoints.down('sm')]: {
-      height: '8vh',
+    paddingTop: 10,
+    paddingBottom: 10,
+    [theme.breakpoints.down("sm")]: {
+      height: "8vh",
     },
-    [theme.breakpoints.up('sm')]: {
-      height: '10vh',
+    [theme.breakpoints.up("sm")]: {
+      height: "10vh",
     },
-    [theme.breakpoints.up('md')]: {
-      height: '8vh',
+    [theme.breakpoints.up("md")]: {
+      height: "8vh",
     },
-    [theme.breakpoints.up('lg')]: {
-      height: '10vh',
+    [theme.breakpoints.up("lg")]: {
+      height: "10vh",
     },
-    [theme.breakpoints.up('xl')]: {
-      height: '10vh',
+    [theme.breakpoints.up("xl")]: {
+      height: "10vh",
     },
-   
   },
 }));
 
-export default function MenuAppBar({funcion,scroll}) {
+export default function MenuAppBar({ funcion, scroll }) {
   const classes = useStyles();
   //states
   const [source, setSource] = useState(false);
@@ -50,19 +49,21 @@ export default function MenuAppBar({funcion,scroll}) {
   return (
     <div>
       {source ? (
-      <AppBar position="sticky" color="background">
-        <Toolbar className={classes.root}>
+        <AppBar position="sticky" color="background">
+          <Toolbar className={classes.root}>
             <img
-            src="logo-brand.png"
-            className={classes.image}
-            onClick={()=>{funcion('home')}}
-          />
-          <MenuButton 
-            funcion={funcion}
-            scroll={scroll}
-          />
-        </Toolbar>
-      </AppBar>):(<AlternativeMenu/>)}   
+              src="logo-brand.png"
+              className={classes.image}
+              onClick={() => {
+                funcion("home");
+              }}
+            />
+            <MenuButton funcion={funcion} scroll={scroll} />
+          </Toolbar>
+        </AppBar>
+      ) : (
+        <AlternativeMenu funcion={funcion} scroll={scroll} />
+      )}
     </div>
   );
 }
