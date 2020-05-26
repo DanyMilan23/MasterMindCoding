@@ -68,8 +68,16 @@ const useStyles = makeStyles(theme => ({
          paddingTop:20,
          // width:'80vw',
     },
-    [theme.breakpoints.up("lg")]: {
+     [theme.breakpoints.up("sm")]: {
          paddingTop:20,
+         // width:'80vw',
+    },
+     [theme.breakpoints.up("md")]: {
+        paddingTop:20,
+    },
+    [theme.breakpoints.up("lg")]: {
+        paddingTop:20,
+        width:'auto',
     },
   },
    text:{
@@ -79,6 +87,9 @@ const useStyles = makeStyles(theme => ({
   input:{
       paddingBottom:20,
   },
+  div:{
+    paddingLeft:25
+  }
   
 }));
 
@@ -141,6 +152,8 @@ function contact({myref}) {
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} md={5} lg={5}>
+                                <div  className={classes.div} >
+                                
                                 <TextField required  
                                 className={classes.input} 
                                 color="primary" 
@@ -187,7 +200,7 @@ function contact({myref}) {
                                 className={classes.text}
                                 fullWidth/>
                                
-                               
+                               </div>
                             </Grid>
                             <Grid item  xs={9} md={10} lg={10}/>
                             <Grid item  xs={3} md={2} lg={2}>

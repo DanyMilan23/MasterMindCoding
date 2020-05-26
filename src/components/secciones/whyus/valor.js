@@ -176,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 5,
       fontSize: "16px",
       paddingLeft: 20,
-      width:'50vw'
+      width:'30vw'
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "16px",
