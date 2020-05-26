@@ -176,6 +176,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 5,
       fontSize: "16px",
       paddingLeft: 20,
+      width:'50vw'
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "16px",
@@ -196,9 +197,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   burbuja: {
-    width: "35vw",
-    paddingLeft: "8vw",
-    paddingRight: "7vw",
+    width: "98vw",
+    paddingLeft: "1vw",
+    paddingRight: "1vw",
   },
   icon: {
     width: "8vw",
@@ -279,12 +280,12 @@ const valor = ({
         ) : null}
         <Typography className={classes.subtitle}>{resumen}</Typography>
       </Grid>
-      <Grid item xs={false} md={false} lg={2} />
+      {source ? <Grid item xs={1} md={1} lg={2} />:null}
       {/** Burbuja en posicion de movil */}
       {source ? null : (
-        <Grid item xs={12} md={10} lg={12}>
-          {estado ? <Burbuja descripcion={descripcion} /> : null}
-        </Grid>
+        <div className={classes.burbuja}>
+          {estado ? <Burbuja descripcion={descripcion}/> : null}
+        </div>
       )}
     </Grid>
     </div>
