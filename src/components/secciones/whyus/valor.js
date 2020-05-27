@@ -197,9 +197,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   burbuja: {
-    width: "98vw",
-    paddingLeft: "1vw",
-    paddingRight: "1vw",
+    width: "auto",
+    //paddingLeft: "3vw",
+    //paddingRight: "5vw",
   },
   icon: {
     width: "8vw",

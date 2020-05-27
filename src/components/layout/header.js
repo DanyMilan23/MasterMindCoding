@@ -49,7 +49,7 @@ export default function MenuAppBar({ funcion, scroll }) {
   return (
     <div>
       {source ? (
-        <AppBar position="sticky" color="background">
+        <AppBar position="fixed" color="background">
           <Toolbar className={classes.root}>
             <img
               src="logo-brand.png"

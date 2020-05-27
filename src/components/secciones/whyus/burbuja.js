@@ -31,24 +31,28 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     paddingTop:0,
-    paddingLeft:"8vw",
+    //paddingLeft:"8vw",
     
     height: "auto",
     [theme.breakpoints.down("sm")]: {
-      width: "auto",
+       width: "80vw",
       paddingRight:"8vw",
+      paddingLeft:"8vw",
     },
     [theme.breakpoints.up("sm")]: {
-      width: "auto",
+       width: "80vw",
       paddingRight:"8vw",
+      paddingLeft:"8vw",
     },
     [theme.breakpoints.up("md")]: {
-      width: "auto",
+      width: "80vw",
       paddingRight:"8vw",
+      paddingLeft:"8vw",
     },
     [theme.breakpoints.up("lg")]: {
-       width: "35vw",
-      paddingRight:"8vw",
+      width: "35vw",
+      paddingRight:"7vw",
+      paddingLeft:"8vw",
     },
   },
   

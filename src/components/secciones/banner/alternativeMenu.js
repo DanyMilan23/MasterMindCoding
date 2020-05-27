@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DetailedExpansionPanel({funcion,scroll}) {
+export default function DetailedExpansionPanel({ funcion, scroll }) {
   const classes = useStyles();
   const [menu, setMenu] = useState({
     solutions: false,
@@ -74,7 +74,13 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
           aria-controls="panel1c-content"
           id="panel1c-header"
         >
-          <img src="logo-brand.png" className={classes.image} />
+          <img
+            src="logo-brand.png"
+            className={classes.image}
+            onClick={() => {
+              funcion("home");
+            }}
+          />
         </ExpansionPanelSummary>
         {menu.solutions == false &&
         menu.industry == false &&
@@ -207,7 +213,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('staff')}}
+                onClick={() => {
+                  funcion("staff");
+                }}
               >
                 IT Staff
               </Button>
@@ -216,7 +224,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('assure')}}
+                onClick={() => {
+                  funcion("assure");
+                }}
               >
                 Assurance
               </Button>
@@ -225,7 +235,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('main')}}
+                onClick={() => {
+                  funcion("main");
+                }}
               >
                 Maintenance
               </Button>
@@ -234,7 +246,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('dev')}}
+                onClick={() => {
+                  funcion("dev");
+                }}
               >
                 Dev Ops
               </Button>
@@ -248,7 +262,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('telecom')}}
+                onClick={() => {
+                  funcion("telecom");
+                }}
               >
                 Telecom
               </Button>
@@ -257,7 +273,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('banking')}}
+                onClick={() => {
+                  funcion("banking");
+                }}
               >
                 Banking & Finance
               </Button>
@@ -266,7 +284,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('ecomerce')}}
+                onClick={() => {
+                  funcion("ecomerce");
+                }}
               >
                 E-Commerce
               </Button>
@@ -275,7 +295,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('retail')}}
+                onClick={() => {
+                  funcion("retail");
+                }}
               >
                 Retail & Logistics
               </Button>
@@ -284,7 +306,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('emark')}}
+                onClick={() => {
+                  funcion("emark");
+                }}
               >
                 E-Marketing
               </Button>
@@ -293,7 +317,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('manu')}}
+                onClick={() => {
+                  funcion("manu");
+                }}
               >
                 Manufacturing
               </Button>
@@ -302,7 +328,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('health')}}
+                onClick={() => {
+                  funcion("health");
+                }}
               >
                 Health Care
               </Button>
@@ -311,7 +339,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('energy')}}
+                onClick={() => {
+                  funcion("energy");
+                }}
               >
                 Energy & Utilities
               </Button>
@@ -320,9 +350,11 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('automotive')}}
+                onClick={() => {
+                  funcion("automotive");
+                }}
               >
-                 Automotive
+                Automotive
               </Button>
             </ExpansionPanelActions>
           </div>
@@ -334,7 +366,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('web')}}
+                onClick={() => {
+                  funcion("web");
+                }}
               >
                 Web
               </Button>
@@ -343,7 +377,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('java')}}
+                onClick={() => {
+                  funcion("java");
+                }}
               >
                 Java
               </Button>
@@ -352,7 +388,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('mobile')}}
+                onClick={() => {
+                  funcion("mobile");
+                }}
               >
                 Mobile
               </Button>
@@ -361,7 +399,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('database')}}
+                onClick={() => {
+                  funcion("database");
+                }}
               >
                 Database
               </Button>
@@ -370,7 +410,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('others')}}
+                onClick={() => {
+                  funcion("others");
+                }}
               >
                 Others
               </Button>
@@ -384,7 +426,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('life')}}
+                onClick={() => {
+                  funcion("life");
+                }}
               >
                 Life at MasterMind
               </Button>
@@ -393,7 +437,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('jobs')}}
+                onClick={() => {
+                  funcion("jobs");
+                }}
               >
                 Jobs at MasterMind
               </Button>
@@ -407,7 +453,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('privacy')}}
+                onClick={() => {
+                  funcion("privacy");
+                }}
               >
                 Privacy Policy
               </Button>
@@ -416,7 +464,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('whoweare')}}
+                onClick={() => {
+                  funcion("whoweare");
+                }}
               >
                 Who we are,Our Values
               </Button>
@@ -430,7 +480,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {scroll()}}
+                onClick={() => {
+                  scroll();
+                }}
               >
                 Send us a Message
               </Button>
@@ -439,7 +491,9 @@ export default function DetailedExpansionPanel({funcion,scroll}) {
               <Button
                 color="primary"
                 className={classes.boton}
-                onClick={() => {funcion('request')}}
+                onClick={() => {
+                  funcion("request");
+                }}
               >
                 Request a Quote
               </Button>

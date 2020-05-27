@@ -1,4 +1,5 @@
 import React,{ useRef, useEffect} from 'react';
+import { makeStyles } from "@material-ui/core/styles";
 import Header from './header';
 import Footer from './footer';
 import Head from 'next/head';
@@ -11,7 +12,21 @@ import Ourwork from '../secciones/ourWork'
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
 
+const useStyles = makeStyles((theme) => ({
+    main:{
+        paddingTop:1,
+        [theme.breakpoints.up("lg")]: {
+            paddingTop:'10vh'
+        },
+        [theme.breakpoints.up("lx")]: {
+            paddingTop:'10vh'
+        },
+        
+    }
+}))
+
 const Layout = props => {
+    const classes = useStyles();
     const myRef = useRef(null)
 
     const executeScroll = () => scrollToRef(myRef)
@@ -26,7 +41,7 @@ const Layout = props => {
                 funcion={props.funcion}
                 scroll={executeScroll}
             />
-            <main>
+            <main  className={classes.main}>
                 {props.children}
             </main>
             <Whyus/>
