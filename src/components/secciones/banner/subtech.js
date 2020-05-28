@@ -94,7 +94,7 @@ export default function MenuListComposition({funcion}) {
                     color='primary'
                   >
                     <MenuItem
-                    onClick={()=>{handleClose;funcion('web')}}
+                    onClick={()=>{funcion('web');handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -107,7 +107,7 @@ export default function MenuListComposition({funcion}) {
                   >Web</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={()=>{handleClose;funcion('java')}}
+                    onClick={()=>{funcion('java');handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -120,7 +120,7 @@ export default function MenuListComposition({funcion}) {
                   >Java</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={()=>{handleClose;funcion('mobile')}}
+                    onClick={()=>{funcion('mobile');handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -133,7 +133,7 @@ export default function MenuListComposition({funcion}) {
                   >Mobile</MenuItem>
                      <Divider /> 
                     <MenuItem
-                    onClick={()=>{handleClose;funcion('database')}}
+                    onClick={()=>{funcion('database');handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -146,7 +146,7 @@ export default function MenuListComposition({funcion}) {
                   >Database</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={()=>{handleClose;funcion('others')}}
+                    onClick={()=>{funcion('others');handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")

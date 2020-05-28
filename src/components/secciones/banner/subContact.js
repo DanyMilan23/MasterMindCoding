@@ -88,7 +88,7 @@ export default function MenuListComposition({funcion,scroll}) {
                   color="primary"
                 >
                   <MenuItem
-                    onClick={()=>{handleClose;scroll()}}
+                    onClick={()=>{scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -103,7 +103,7 @@ export default function MenuListComposition({funcion,scroll}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{handleClose;funcion('request')}}
+                    onClick={()=>{funcion('request');handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
