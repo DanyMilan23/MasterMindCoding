@@ -222,7 +222,7 @@ const valor = ({
   const classes = useStyles();
   const [source, setSource] = useState(false);
   //media querys
-  const matches = useMediaQuery("(min-width:1023px)");
+  const matches = useMediaQuery("(min-width:1025px)");
   useEffect(() => {
     setSource(matches);
   }, [matches]);

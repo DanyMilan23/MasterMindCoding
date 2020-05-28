@@ -9,7 +9,7 @@ const theme = createMuiTheme({
       sm: 415,
       md: 825,
       lg: 1025,
-      xl: 1680,
+      xl: 1280,
     },
   },
   palette: {

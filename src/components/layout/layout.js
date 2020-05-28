@@ -15,10 +15,7 @@ const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 const useStyles = makeStyles((theme) => ({
     main:{
         paddingTop:1,
-        [theme.breakpoints.up("lg")]: {
-            paddingTop:'10vh'
-        },
-        [theme.breakpoints.up("lx")]: {
+        [theme.breakpoints.up("xl")]: {
             paddingTop:'10vh'
         },
         
