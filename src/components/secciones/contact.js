@@ -151,7 +151,7 @@ function contact({myref}) {
                                     Tel: (BO) +591 - 70710554
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} md={5} lg={5}>
+                            <Grid item xs={12} md={12} lg={5}>
                                 <div  className={classes.div} >
                                 
                                 <TextField required  
