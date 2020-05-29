@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       paddingLeft: 55,
-      paddingTop: 5,
+      paddingTop: 20,
+      lineHeight: "14px",
     },
     [theme.breakpoints.up("sm")]: {
       fontSize: "24px",
@@ -52,7 +53,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       paddingLeft: 55,
-      paddingTop: 5,
+      paddingTop: 15,
+      lineHeight: "14px",
     },
     [theme.breakpoints.up("sm")]: {
       fontSize: "24px",
@@ -81,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "16px",
       paddingLeft: 55,
       paddingTop: 25,
+      lineHeight: "14px",
     },
     [theme.breakpoints.up("sm")]: {
       fontSize: "24px",
@@ -108,7 +111,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       paddingLeft: 55,
-      paddingTop: 35,
+      paddingTop: 15,
+      lineHeight: "14px",
     },
     [theme.breakpoints.up("sm")]: {
       fontSize: "24px",
@@ -136,7 +140,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "16px",
       paddingLeft: 55,
-      paddingTop: 25,
+      paddingTop: 8,
+      lineHeight: "14px",
     },
     [theme.breakpoints.up("sm")]: {
       fontSize: "24px",
@@ -166,11 +171,13 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 1,
       fontSize: "12px",
       paddingLeft: 55,
+      width:'50vw'
     },
     [theme.breakpoints.up("sm")]: {
       paddingTop: 5,
       fontSize: "16px",
       paddingLeft: 20,
+      width:'40vw'
     },
     [theme.breakpoints.up("md")]: {
       paddingTop: 5,
@@ -207,6 +214,15 @@ const useStyles = makeStyles((theme) => ({
   desc: {
     width: "35vw",
   },
+  img:{
+    [theme.breakpoints.down("sm")]: {
+        paddingTop:'5px',
+        paddingLeft:'6vw',
+        width:'55px',
+        height:'auto',  
+    },
+    
+  }
 }));
 
 const valor = ({
@@ -238,7 +254,7 @@ const valor = ({
       {/** imagen*/}
       <Grid item xs={2} md={2} lg={2}>
         <IconButton onClick={funcion}>
-          <img src={imagen}/>
+          <img src={imagen} className={classes.img}/>
         </IconButton>
       </Grid>
       {/** Descripcion */}

@@ -35,19 +35,19 @@ const useStyles = makeStyles((theme) => ({
     
     height: "auto",
     [theme.breakpoints.down("sm")]: {
-       width: "80vw",
-      paddingRight:"8vw",
+      width: "84vw",
+      paddingRight:"3vw",
       paddingLeft:"8vw",
     },
     [theme.breakpoints.up("sm")]: {
-       width: "80vw",
-      paddingRight:"8vw",
+       width: "85vw",
+      paddingRight:"4vw",
       paddingLeft:"8vw",
     },
     [theme.breakpoints.up("md")]: {
-      width: "80vw",
-      paddingRight:"8vw",
-      paddingLeft:"8vw",
+      width: "90vw",
+      paddingRight:"4vw",
+      paddingLeft:"4vw",
     },
     [theme.breakpoints.up("lg")]: {
       width: "35vw",
