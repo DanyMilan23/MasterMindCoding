@@ -7,25 +7,38 @@ import Grid from "@material-ui/core/Grid";
 import Valores from '../secciones/Whyus/valores'
 
 const useStyles = makeStyles((theme) => ({
-   title: {
-    fontSize: "60px",
+    title: {
     lineheight: "20px",
     color: "#171c48",
-    fontFamily: "'Robot', sans-serif",
+    fontFamily: "'Roboto', sans-serif",
     fontWeight: 700,
     letterSpacing: "-1px",
     [theme.breakpoints.down("sm")]: {
       fontSize: "30px",
+      paddingLeft: "3vw",
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "30px",
+      paddingLeft: "3vw",
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "30px",
+      paddingLeft: "3vw",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "60px",
+      paddingTop: 30,
+      paddingLeft: "3vw",
     },
   },
   container:{
     paddingTop:40,
-    paddingLeft:56,
-    paddingRight:56,
+    //paddingLeft:56,
+    //paddingRight:56,
     marginBottom:90,
     [theme.breakpoints.down("sm")]: {
-      paddingLeft:10,
-      paddingRight:10,
+      //paddingLeft:10,
+      //paddingRight:10,
     },
   }
 }));

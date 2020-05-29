@@ -202,9 +202,9 @@ function contact({myref}) {
                                
                                </div>
                             </Grid>
-                            <Grid item  xs={9} md={10} lg={10}/>
-                            <Grid item  xs={3} md={2} lg={2}>
-                                 <Button size="small" variant="contained" color="primary" onClick={handlePress} >
+                            <Grid item  xs={10} md={10} lg={9}/>
+                            <Grid item  xs={2} md={2} lg={2}>
+                                 <Button size="small" variant="contained" color="primary" onClick={handlePress} fullWidth>
                                     Submit
                                 </Button>
                             </Grid>

@@ -8,15 +8,15 @@ import Item from "./technology/tech";
 
 const useStyles = makeStyles((theme) => ({
   carousel: {
-    paddingLeft: 56,
-    paddingRight: 56,
+    //paddingLeft: 56,
+    ///paddingRight: 56,
     width: "100vw",
     height: "auto",
     backgroundColor: "#171c48",
     paddingBottom: "80px",
     [theme.breakpoints.down("sm")]: {
-      paddingLeft: 20,
-      paddingRight: 15,
+      //paddingLeft: 20,
+      //paddingRight: 15,
       width: "100vw",
       height: "auto",
       paddingBottom: "30px",
@@ -26,18 +26,28 @@ const useStyles = makeStyles((theme) => ({
       height: "auto",
     },
   },
-  title: {
-    paddingTop: "80px",
-    paddingBottom: "50px",
-    fontSize: "60px",
-    lineHeight: "20px",
-    color: "#ffffff",
-    fontFamily: "'Robot', sans-serif",
+   title: {
+    lineheight: "20px",
+    color: "#ffff",
+    fontFamily: "'Roboto', sans-serif",
     fontWeight: 700,
+    letterSpacing: "-1px",
     [theme.breakpoints.down("sm")]: {
       fontSize: "30px",
-      paddingTop: "35px",
-      paddingBottom: "10px",
+      paddingLeft: "3vw",
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "30px",
+      paddingLeft: "3vw",
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "30px",
+      paddingLeft: "3vw",
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: "60px",
+      paddingTop: 30,
+      paddingLeft: "3vw",
     },
   },
 }));
@@ -76,8 +86,12 @@ const carouseltech = (props) => {
                 slidesPerPage: 5  ,
                 arrows: true
                 },
-                1025: {
+                1100: {
                 slidesPerPage:7,
+                arrows: true
+                },
+                2000: {
+                slidesPerPage:8,
                 arrows: true
                 }
             }}
