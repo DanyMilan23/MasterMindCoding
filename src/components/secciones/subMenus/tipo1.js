@@ -31,12 +31,12 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "3vh",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "35px",
+      fontSize: "25px",
       lineHeight: "32px",
       paddingTop: "5vh",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "50px",
+      fontSize: "45px",
       lineHeight: "52px",
       paddingTop: "10vh",
     },
@@ -56,11 +56,11 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "24px",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "27px",
+      fontSize: "20px",
       lineHeight: "24px",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "36px",
+      fontSize: "32px",
       lineHeight: "48px",
     },
   },
@@ -83,12 +83,12 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "3vh",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "25px",
+      fontSize: "20px",
       lineHeight: "23px",
       paddingTop: "5vh",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "32px",
+      fontSize: "28px",
       lineHeight: "45px",
       paddingTop: "10vh",
     },
@@ -112,12 +112,12 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: "7vh",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "25px",
+      fontSize: "20px",
       lineHeight: "23px",
       paddingBottom: "10vh",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "34px",
+      fontSize: "30px",
       lineHeight: "47px",
       paddingBottom: "20vh",
     },
@@ -135,7 +135,7 @@ const useStyles = makeStyles((theme) => ({
       height: '90vh',
     },
     [theme.breakpoints.up('md')]: {
-      height: '32vh',
+      height: '50vh',
     },
     [theme.breakpoints.up('lg')]: {
       height: '90vh',
