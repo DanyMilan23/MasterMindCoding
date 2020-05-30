@@ -7,6 +7,7 @@ import ExpansionPanelActions from "@material-ui/core/ExpansionPanelActions";
 import Button from "@material-ui/core/Button";
 import MenuIcon from "@material-ui/icons/Menu";
 import Constants from "../../../config/constants";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -53,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
     height: "15px",
     fontSize: "10px",
   },
+  subMenus:{
+    paddingLeft:'5vw'
+  }
 }));
 
 export default function DetailedExpansionPanel({ funcion, scroll }) {
@@ -82,30 +86,158 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             }}
           />
         </ExpansionPanelSummary>
-        <ExpansionPanelActions className={classes.linksContainer}>
-          <Button
-            color="primary"
-            className={classes.boton}
-            onClick={(e) => {
-              e.preventDefault();
-              setMenu({
-                solutions: true,
-                industry: false,
-                technology: false,
-                careers: false,
-                about: false,
-                contact: false,
-              });
-            }}
-          >
-            {Constants.STRINGS.SOLUTIONS}
-          </Button>
-        </ExpansionPanelActions>
+        {menu.solutions == false &&
+        menu.industry == false &&
+        menu.technology == false &&
+        menu.careers == false &&
+        menu.about == false &&
+        menu.contact == false ? (
+          <div>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: true,
+                    industry: false,
+                    technology: false,
+                    careers: false,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.SOLUTIONS}
+              </Button>
+            </ExpansionPanelActions>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: true,
+                    technology: false,
+                    careers: false,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.INDUSTRY}
+              </Button>
+            </ExpansionPanelActions>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: true,
+                    careers: false,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.TECHNOLOGY}
+              </Button>
+            </ExpansionPanelActions>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: false,
+                    careers: true,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.CAREERS}
+              </Button>
+            </ExpansionPanelActions>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: false,
+                    careers: false,
+                    about: true,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.ABOUT}
+              </Button>
+            </ExpansionPanelActions>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: false,
+                    careers: false,
+                    about: false,
+                    contact: true,
+                  });
+                }}
+              >
+                {Constants.STRINGS.CONTACT}
+              </Button>
+            </ExpansionPanelActions>
+          </div>
+        ) : null}
+
+        {/*Sub Menus */}
+        {/*Solutions */}
         {menu.solutions == true ? (
           <div>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: true,
+                    industry: false,
+                    technology: false,
+                    careers: false,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.SOLUTIONS}
+              </Button>
+            </ExpansionPanelActions>
+            <Divider variant='middle' light='true'/>
+            <div className={classes.subMenus}>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("staff");
@@ -116,7 +248,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("assure");
@@ -127,7 +259,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("main");
@@ -138,7 +270,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("dev");
@@ -147,32 +279,36 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
                 Dev Ops
               </Button>
             </ExpansionPanelActions>
+            </div>
           </div>
         ) : null}
-        <ExpansionPanelActions className={classes.linksContainer}>
-          <Button
-            color="primary"
-            className={classes.boton}
-            onClick={(e) => {
-              e.preventDefault();
-              setMenu({
-                solutions: false,
-                industry: true,
-                technology: false,
-                careers: false,
-                about: false,
-                contact: false,
-              });
-            }}
-          >
-            {Constants.STRINGS.INDUSTRY}
-          </Button>
-        </ExpansionPanelActions>
+        {/*Industry */}
         {menu.industry == true ? (
           <div>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: true,
+                    technology: false,
+                    careers: false,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.INDUSTRY}
+              </Button>
+            </ExpansionPanelActions>
+            <Divider/>
+            <div className={classes.subMenus}>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("telecom");
@@ -183,7 +319,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("banking");
@@ -194,7 +330,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("ecomerce");
@@ -205,7 +341,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("retail");
@@ -216,7 +352,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("emark");
@@ -227,7 +363,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("manu");
@@ -238,7 +374,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("health");
@@ -249,7 +385,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("energy");
@@ -260,7 +396,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("automotive");
@@ -269,32 +405,36 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
                 Automotive
               </Button>
             </ExpansionPanelActions>
+            </div>
           </div>
         ) : null}
-        <ExpansionPanelActions className={classes.linksContainer}>
-          <Button
-            color="primary"
-            className={classes.boton}
-            onClick={(e) => {
-              e.preventDefault();
-              setMenu({
-                solutions: false,
-                industry: false,
-                technology: true,
-                careers: false,
-                about: false,
-                contact: false,
-              });
-            }}
-          >
-            {Constants.STRINGS.TECHNOLOGY}
-          </Button>
-        </ExpansionPanelActions>
+        {/*technology */}
         {menu.technology == true ? (
           <div>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: true,
+                    careers: false,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.TECHNOLOGY}
+              </Button>
+            </ExpansionPanelActions>
+            <Divider/>
+            <div className={classes.subMenus}>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("web");
@@ -305,7 +445,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("java");
@@ -316,7 +456,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("mobile");
@@ -327,7 +467,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("database");
@@ -338,7 +478,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("others");
@@ -347,29 +487,33 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
                 Others
               </Button>
             </ExpansionPanelActions>
+            </div>
           </div>
         ) : null}
-        <ExpansionPanelActions className={classes.linksContainer}>
-          <Button
-            color="primary"
-            className={classes.boton}
-            onClick={(e) => {
-              e.preventDefault();
-              setMenu({
-                solutions: false,
-                industry: false,
-                technology: false,
-                careers: true,
-                about: false,
-                contact: false,
-              });
-            }}
-          >
-            {Constants.STRINGS.CAREERS}
-          </Button>
-        </ExpansionPanelActions>
+        {/*Careers */}
         {menu.careers == true ? (
           <div>
+             <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: false,
+                    careers: true,
+                    about: false,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.CAREERS}
+              </Button>
+            </ExpansionPanelActions>
+            <Divider/>
+            <div className={classes.subMenus}>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
                 color="secondary"
@@ -392,32 +536,36 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
                 Jobs at MasterMind
               </Button>
             </ExpansionPanelActions>
+            </div>
           </div>
         ) : null}
-        <ExpansionPanelActions className={classes.linksContainer}>
-          <Button
-            color="primary"
-            className={classes.boton}
-            onClick={(e) => {
-              e.preventDefault();
-              setMenu({
-                solutions: false,
-                industry: false,
-                technology: false,
-                careers: false,
-                about: true,
-                contact: false,
-              });
-            }}
-          >
-            {Constants.STRINGS.ABOUT}
-          </Button>
-        </ExpansionPanelActions>
+        {/*about */}
         {menu.about == true ? (
           <div>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: false,
+                    careers: false,
+                    about: true,
+                    contact: false,
+                  });
+                }}
+              >
+                {Constants.STRINGS.ABOUT}
+              </Button>
+            </ExpansionPanelActions>
+            <Divider/>
+            <div className={classes.subMenus}>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("privacy");
@@ -428,7 +576,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("whoweare");
@@ -437,32 +585,36 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
                 Who we are,Our Values
               </Button>
             </ExpansionPanelActions>
+            </div>
           </div>
         ) : null}
-        <ExpansionPanelActions className={classes.linksContainer}>
-          <Button
-            color="primary"
-            className={classes.boton}
-            onClick={(e) => {
-              e.preventDefault();
-              setMenu({
-                solutions: false,
-                industry: false,
-                technology: false,
-                careers: false,
-                about: false,
-                contact: true,
-              });
-            }}
-          >
-            {Constants.STRINGS.CONTACT}
-          </Button>
-        </ExpansionPanelActions>
+        {/*contact */}
         {menu.contact == true ? (
           <div>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
+                className={classes.boton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu({
+                    solutions: false,
+                    industry: false,
+                    technology: false,
+                    careers: false,
+                    about: false,
+                    contact: true,
+                  });
+                }}
+              >
+                {Constants.STRINGS.CONTACT}
+              </Button>
+            </ExpansionPanelActions>
+            <Divider/>
+            <div className={classes.subMenus}>
+            <ExpansionPanelActions className={classes.linksContainer}>
+              <Button
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   scroll();
@@ -473,7 +625,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
             </ExpansionPanelActions>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={() => {
                   funcion("request");
@@ -482,21 +634,9 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
                 Request a Quote
               </Button>
             </ExpansionPanelActions>
+            </div>
           </div>
         ) : null}
-        {/*Sub Menus */}
-        {/*Solutions */}
-
-        {/*Industry */}
-
-        {/*technology */}
-
-        {/*Careers */}
-
-        {/*about */}
-
-        {/*contact */}
-
         {/*back */}
         {menu.solutions == true ||
         menu.industry == true ||
@@ -507,7 +647,7 @@ export default function DetailedExpansionPanel({ funcion, scroll }) {
           <div>
             <ExpansionPanelActions className={classes.linksContainer}>
               <Button
-                color="secondary"
+                color="primary"
                 className={classes.boton}
                 onClick={(e) => {
                   e.preventDefault();

@@ -217,7 +217,7 @@ const useStyles = makeStyles((theme) => ({
   img:{
     [theme.breakpoints.down("sm")]: {
         paddingTop:'5px',
-        paddingLeft:'6vw',
+        paddingLeft:'10vw',
         width:'55px',
         height:'auto',  
     },
