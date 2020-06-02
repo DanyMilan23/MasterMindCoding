@@ -11,6 +11,7 @@ import Minifooter from '../secciones/miniFooter'
 import Ourwork from '../secciones/ourWork'
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
+const scrollToRef2 = (ref) => window.scrollTo(0, ref.current.offsetTop) 
 
 const useStyles = makeStyles((theme) => ({
     main:{
@@ -25,8 +26,11 @@ const useStyles = makeStyles((theme) => ({
 const Layout = props => {
     const classes = useStyles();
     const myRef = useRef(null)
+    const myRef2 = useRef(null)
 
     const executeScroll = () => scrollToRef(myRef)
+    const executeScroll2 = () => scrollToRef(myRef2)
+  
 
     return ( 
         <>
@@ -37,8 +41,9 @@ const Layout = props => {
             <Header 
                 funcion={props.funcion}
                 scroll={executeScroll}
+                scroll2={executeScroll2}
             />
-            <main  className={classes.main}>
+            <main  className={classes.main} ref={myRef2}>
                 {props.children}
             </main>
             <Whyus/>
