@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function MenuListComposition({funcion}) {
+export default function MenuListComposition({funcion,scroll}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -94,7 +94,7 @@ export default function MenuListComposition({funcion}) {
                     color='primary'
                   >
                     <MenuItem
-                    onClick={()=>{funcion('web');handleToggle();}}
+                    onClick={()=>{funcion('web');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -107,7 +107,7 @@ export default function MenuListComposition({funcion}) {
                   >Web</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={()=>{funcion('java');handleToggle();}}
+                    onClick={()=>{funcion('java');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -120,7 +120,7 @@ export default function MenuListComposition({funcion}) {
                   >Java</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={()=>{funcion('mobile');handleToggle();}}
+                    onClick={()=>{funcion('mobile');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -133,7 +133,7 @@ export default function MenuListComposition({funcion}) {
                   >Mobile</MenuItem>
                      <Divider /> 
                     <MenuItem
-                    onClick={()=>{funcion('database');handleToggle();}}
+                    onClick={()=>{funcion('database');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -146,7 +146,7 @@ export default function MenuListComposition({funcion}) {
                   >Database</MenuItem>
                     <Divider /> 
                     <MenuItem
-                    onClick={()=>{funcion('others');handleToggle();}}
+                    onClick={()=>{funcion('others');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")

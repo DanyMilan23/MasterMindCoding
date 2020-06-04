@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuAppBar({funcion,scroll}) {
+export default function MenuAppBar({funcion,scroll,scroll2}) {
   const classes = useStyles();
   const [menu,setMenu]=useState({
     menu1:false,
@@ -30,12 +30,12 @@ export default function MenuAppBar({funcion,scroll}) {
   })
   return (
     <div className={classes.container}>
-      <Solutions className={classes.boton} funcion={funcion}/>
-      <Industry className={classes.boton}  funcion={funcion}/>
-      <Technology className={classes.boton} funcion={funcion}/>
-      <Careers className={classes.boton}  funcion={funcion}/>
-      <About className={classes.boton} funcion={funcion}/>
-      <Contact className={classes.boton} funcion={funcion} scroll={scroll}/>
+      <Solutions className={classes.boton} funcion={funcion} scroll={scroll2}/>
+      <Industry className={classes.boton}  funcion={funcion} scroll={scroll2}/>
+      <Technology className={classes.boton} funcion={funcion} scroll={scroll2}/>
+      <Careers className={classes.boton}  funcion={funcion} scroll={scroll2}/>
+      <About className={classes.boton} funcion={funcion} scroll={scroll2}/>
+      <Contact className={classes.boton} funcion={funcion} scroll={scroll} scroll2={scroll2}/>
     </div>
   );
 }

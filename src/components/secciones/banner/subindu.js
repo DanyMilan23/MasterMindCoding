@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuListComposition({funcion}) {
+export default function MenuListComposition({funcion,scroll}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -92,7 +92,7 @@ export default function MenuListComposition({funcion}) {
                   color="primary"
                 >
                   <MenuItem
-                    onClick={()=>{funcion('telecom');handleToggle();}}
+                    onClick={()=>{funcion('telecom');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -107,7 +107,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('banking');handleToggle();}}
+                    onClick={()=>{funcion('banking');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -122,7 +122,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('ecomerce');handleToggle();}}
+                    onClick={()=>{funcion('ecomerce');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -137,7 +137,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('retail');handleToggle();}}
+                    onClick={()=>{funcion('retail');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -152,7 +152,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('emark');handleToggle();}}
+                    onClick={()=>{funcion('emark');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -167,7 +167,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('manu');handleToggle();}}
+                    onClick={()=>{funcion('manu');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -182,7 +182,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('health');handleToggle();}}
+                    onClick={()=>{funcion('health');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -197,7 +197,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('energy');handleToggle();}}
+                    onClick={()=>{funcion('energy');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
@@ -212,7 +212,7 @@ export default function MenuListComposition({funcion}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('automotive');handleToggle();}}
+                    onClick={()=>{funcion('automotive');scroll();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")

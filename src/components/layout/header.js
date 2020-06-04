@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   image: {
+    cursor:'pointer',
     paddingTop: 10,
     paddingBottom: 10,
     [theme.breakpoints.down("sm")]: {
@@ -59,11 +60,11 @@ export default function MenuAppBar({ funcion, scroll,scroll2 }) {
                 scroll2();
               }}
             />
-            <MenuButton funcion={funcion} scroll={scroll} />
+            <MenuButton funcion={funcion} scroll={scroll} scroll2={scroll2} />
           </Toolbar>
         </AppBar>
       ) : (
-        <AlternativeMenu funcion={funcion} scroll={scroll} />
+        <AlternativeMenu funcion={funcion} scroll2={scroll2} />
       )}
     </div>
   );

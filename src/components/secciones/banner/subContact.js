@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MenuListComposition({funcion,scroll}) {
+export default function MenuListComposition({funcion,scroll,scroll2}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -103,7 +103,7 @@ export default function MenuListComposition({funcion,scroll}) {
                   </MenuItem>
                   <Divider />
                   <MenuItem
-                    onClick={()=>{funcion('request');handleToggle();}}
+                    onClick={()=>{funcion('request');scroll2();handleToggle();}}
                     onMouseEnter={(e) => (
                       (e.target.style.color = "#ffff"),
                       (e.target.style.backgroundColor = "#171c48")
